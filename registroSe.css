@@ -1,0 +1,52 @@
+.Main{
+	display: inline-block;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.header{
+	background-color: #e8505b;
+}
+.Formu{
+	background-image: url(picture/fondo.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+
+}
+#img{
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	object-position: center center;
+	opacity: 0.8;
+}
+
+#prueba{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+h1{
+	font-family: 'Lobster', cursive;
+}
+.btn{
+	margin-top: 20px;
+	background-color: #77D353;
+}
+footer{
+	margin-top: -8px;
+	background-color: #00A6FF;
+	color: #47525E;
+}
+.fab{
+	color: #47525E;
+}
+.nav-link{
+	color: #47525E;
+}
+input{
+	border-radius: 5px;
+}
