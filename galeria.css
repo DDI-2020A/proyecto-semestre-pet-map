@@ -1,0 +1,31 @@
+body{
+	background-image: url(picture/fondo.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.head{
+	background-color: #77D353;
+	width: 100%;
+	height: 50px;
+	margin-bottom: 50px;
+}
+
+.col-4{
+	margin: 20px auto;
+
+}
+
+.image{
+	width: 250px;
+	height: 250px;
+	background-color: #898484;
+	margin: 0 auto;
+}
+
+.color1{
+	background-color: #77D353;
+}
+.color2{
+	background-color: #00A6FF;
+}
