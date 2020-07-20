@@ -1,0 +1,20 @@
+body{
+	background-image: url(picture/Fondo.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+h1{
+	margin-top: 2%;
+	font-family: 'Fredoka One', cursive;
+	font-size: 44px;
+}
+#contacts{
+	margin-top: 20%;
+}
+p{
+	margin-left: 3%;
+	margin-top: 10%;
+	font-family: 'Fredoka One', cursive;
+	font-size: 30px;
+	color: #47525E;
+}

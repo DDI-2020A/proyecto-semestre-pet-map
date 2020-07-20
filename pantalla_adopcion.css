@@ -1,0 +1,32 @@
+body{
+	font-family: 'Roboto', sans-serif, !important;
+	background-image: url(picture/Gato.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+h1{
+	margin-top: 30px;
+	font-family: 'Fredoka One', cursive;
+	font-size: 44px;
+}
+h2{
+	margin-top: 30px !important;
+	font-family: 'Fredoka One', cursive;
+	font-size: 30px;
+}
+p{
+	font-size: 20px;
+}
+input{
+	margin-top: 10px;
+	width: 250px;
+	opacity: 0.6;
+}
+#contacts{
+	margin-top: 30px;
+}
+button{
+	margin-top: 15px;
+	align-content: center;
+	margin-left: 30%;
+}
