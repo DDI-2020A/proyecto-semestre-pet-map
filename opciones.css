@@ -1,0 +1,43 @@
+body{
+	background-image: url(picture/fondo.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.Main{
+	display: inline-block;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+footer{
+    
+	background-color: #00A6FF;
+	color: #47525E;
+}
+ #menu{
+    align-items: center;
+	text-align: center;
+	justify-content: center;
+
+ }
+
+.btn{
+  
+  margin:auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #77D353;
+  display: flex;
+  border: 20px solid #d2691e;
+}
+
+
+
+#img{
+	
+	object-fit: contain;
+	object-position: center center;
+	border-radius: 25px;
+}
