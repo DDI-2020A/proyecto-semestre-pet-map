@@ -1,0 +1,47 @@
+body{
+	background-image: url(picture/fondo.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.Main{
+	display: inline-block;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+footer{
+    
+	background-color: #00A6FF;
+	color: #47525E;
+}
+ #menu{
+    align-items: center;
+	text-align: center;
+	justify-content: center;
+
+ }
+hr{
+	margin: 0px;
+}
+
+h1{
+	
+	float: :right;
+	font-size: 50px;
+	font-family: 'Francois One', sans-serif;
+	text-align: center;
+	font-weight: bold;
+}
+
+p{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+#img{
+	
+	object-fit: contain;
+	object-position: center center;
+	border-radius: 250px;
+}
