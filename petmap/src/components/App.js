@@ -1,21 +1,22 @@
 import React, {useState, useEffect} from 'react';
 
 import '../styles/App.css';
-import {Layout, Menu, Row, Col, Button} from 'antd';
+import {Layout, Menu, Row, Col, Button,Typography} from 'antd';
 import logo from '../images/Logo.PNG';
-import img1 from '../images/perrogato.jpeg';
+import img1 from '../images/inicio.jpeg';
 import {HomeOutlined,FormOutlined,NotificationOutlined,ApartmentOutlined,SmileOutlined,QuestionCircleOutlined} from '@ant-design/icons';
 
 const { Header, Footer, Content } = Layout;
+const {Title} =Typography;
 
-const App=()=> {
+const App = () => {
 
 
     const [current, setCurrent] = useState('home');
 
     return (
 
-        <Layout>
+        <Layout className='layout'>
           <Header className='main-header'>
               <div className='logo'>
                   <img src={ logo } alt='PET MAP' />
@@ -53,15 +54,18 @@ const App=()=> {
                 </Col>
                 <Col span = {9}>
                     <div className='box'>
-                        <h1>PET <br/> MAP</h1>
-                        <h3>Tu acción puede cambiar vidas</h3>
-                        <Button type="primary">REGISTRARSE</Button><br/>
+                        <Title>PET <br/> MAP</Title>
+                        <Title level = {2} className='title2 mb-5 mt-5'>Tu acción puede cambiar vidas</Title><br/><br/><br/><br/>
+                        <Button type="primary">REGISTRARSE</Button><br/> <br/>
                         <Button type="primary">INICIAR SESIÓN</Button>
                     </div>
                 </Col>
             </Row>
           </Content>
-          <Footer>Footer</Footer>
+          <Footer className= 'main-footer'>
+              <div >Pet Map - Derechos reservados 2020</div>
+          </Footer>
+
         </Layout>
         );
 };
