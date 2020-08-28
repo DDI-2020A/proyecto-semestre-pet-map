@@ -1,0 +1,39 @@
+.main-header{
+  display: flex;
+  position: fixed;
+  width: 100%;
+
+
+}
+.main-menu {
+  background-color: aliceblue;
+  height: 100%;
+}
+.logo{
+  margin-right: 50px;
+}
+.main-content{
+  background-image: url("../images/Fondo.PNG");
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 64px - 70px);
+  padding: 0 50px;
+  margin-top: 64px;
+}
+
+.logo img{
+  height: 100px;
+}
+.imgPp {
+  display: flex;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+.box{
+  align-items: center;
+  text-align: center;
+}
+
