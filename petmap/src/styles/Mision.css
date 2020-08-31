@@ -1,0 +1,30 @@
+.fondo {
+  position: absolute;
+  background-image: url("../images/Fondo.PNG");
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 600px;
+  opacity: 0.5;
+}
+
+.conten {
+  position: absolute;
+}
+
+p {
+  font: oblique bold 120% cursive;
+}
+
+h1 {
+  font: oblique bold 200% cursive;
+}
+
+img {
+  width: 550px;
+}
+
+.col-6 {
+  padding-top: 50px;
+}
