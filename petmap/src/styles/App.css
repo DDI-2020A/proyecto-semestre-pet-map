@@ -12,8 +12,9 @@
   margin-right: 50px;
 }
 .main-content{
-  background-image: url("../images/Fondo.PNG");
+  background-image: url(../images/Fondo.PNG);
   background-repeat: no-repeat;
+  background-size: cover;
   min-height: calc(100vh - 64px - 70px);
 }
 
@@ -30,14 +31,26 @@
   text-align: center;
 }
 .box{
-  text-align: center;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 100%;
   height: 100%;
-  background-image: url(../images/Fondo.PNG);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
+.box .boxCenter .title1{
+  font-family: 'Londrina Solid', cursive;
+  color: #47525E;
+  font-size: 100px;
+}
+.box .boxCenter .title2{
+  font-family: 'Londrina Solid', cursive;
+  color: #8B4513;
+font-weight: bolder;
+
+}
+
+
 .title2{
   margin-bottom: 200px;
 
