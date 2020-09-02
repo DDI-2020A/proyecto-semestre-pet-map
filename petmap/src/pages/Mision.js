@@ -1,8 +1,9 @@
 import React from 'react';
-import logo from '../images/logo.svg';
+import logo from '../images/Logo.svg';
 import {Layout, Menu, Row, Col, Button,Typography} from 'antd';
 import '../styles/Mision.css';
 import dog from '../images/dog1.png';
+import Navigation from "../components/Navigation";
 
 const { Footer } = Layout;
 
@@ -10,8 +11,9 @@ const Mision = () => {
 
   return (
       <>
-      <div className="fondo"></div>
-        <div className="row conten">
+          <Navigation />
+          <div className="fondo"></div>
+            <div className="row conten">
             <div className="col-6">
                 <img src={dog}/>
             </div>
