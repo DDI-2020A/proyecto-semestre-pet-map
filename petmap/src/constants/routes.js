@@ -1,6 +1,6 @@
 const publicRoutes = {
     HOME: '/',
-    REGISTRO: '/registro',
+    REGISTER: '/registro',
     INICIOSESION: '/inicioSesion',
 };
 
