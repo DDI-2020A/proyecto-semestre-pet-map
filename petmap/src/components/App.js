@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 
-import '../styles/App.css';
+import '../styles/App.less';
 import {Layout, Row, Col, Button,Typography} from 'antd';
 import { BrowserRouter as Router } from 'react-router-dom';
 import logo from '../images/Logo.PNG';
-import img1 from '../images/inicio.jpeg';
+import img1 from '../images/Captura1.PNG';
 import Navigation from "./Navigation";
 
 
