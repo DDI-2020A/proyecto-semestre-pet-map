@@ -1,11 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 
-import '../styles/App.css';
-import {Layout, Row, Col, Button,Typography} from 'antd';
-import { BrowserRouter as Router } from 'react-router-dom';
+import '../styles/App.less';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
+import {Layout, Row, Col, Button,Typography, Breadcrumb} from 'antd';
+
 import logo from '../images/Logo.PNG';
-import img1 from '../images/inicio.jpeg';
+import img1 from '../images/Captura1.PNG';
 import Navigation from "./Navigation";
+import Routes from "../constants/routes";
 
 
 const { Header, Footer, Content } = Layout;
@@ -15,7 +17,7 @@ const {Title} =Typography;
 const App = () => {
 
     return (
-
+        <Router>
             <Layout className='layout'>
               <Header className='main-header'>
                   <div className='logo'>
@@ -37,9 +39,9 @@ const App = () => {
                                 <Title className='title1'>PET  MAP</Title>
                                 <Title level = {2} className='title2 '>TU ACCIÓN PUEDE CAMBIAR VIDAS</Title>
 
-                                <Button type="primary" shape="round" >
+                                <Link to={Routes.REGISTER}><Button type="primary" shape="round" >
                                     REGISTRARSE
-                                 </Button><br/><br/>
+                                </Button></Link><br/><br/>
                                 <Button type="primary" shape="round" >
                                     INICIAR SESIÓN
                                 </Button>
@@ -53,7 +55,7 @@ const App = () => {
               </Footer>
 
             </Layout>
-
+        </Router>
         );
 };
 
