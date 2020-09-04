@@ -5,7 +5,6 @@ import {Link} from "react-router-dom";
 import Routes from "../constants/routes";
 
 const {Title} =Typography;
-git
 
 const Adopciones = () => (
     <div>
