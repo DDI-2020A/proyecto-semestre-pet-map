@@ -1,21 +1,24 @@
 import React, {useState, useEffect} from 'react';
 import {Menu} from "antd";
+import {Link} from 'react-router-dom';
+import Routes from "../constants/routes";
 import {HomeOutlined,FormOutlined,NotificationOutlined,ApartmentOutlined,SmileOutlined,QuestionCircleOutlined} from '@ant-design/icons';
 const { SubMenu } = Menu;
+
 
 const Navigation=()=>{
 
     const [current, setCurrent] = useState('home');
 
     return(
-        //Otorgamos las caracteristicas para el Menu
+
         <Menu className='main-menu'
           onClick={(e)=>setCurrent(e.key)}
           selectedKeys={[current]}
           mode='horizontal'>
 
             <Menu.Item key='home' icon={<HomeOutlined />}>
-                Home
+                <Link to={Routes.HOME}>Home</Link>
             </Menu.Item>
             <Menu.Item key='registro' icon={<FormOutlined />}>
                 Registro Adopción
@@ -25,7 +28,7 @@ const Navigation=()=>{
             </Menu.Item>
             <SubMenu icon={<ApartmentOutlined />} title='servicios'>
                 <Menu.Item key="donaciones">Donaciones</Menu.Item>
-                <Menu.Item key="adopcion">Adopción</Menu.Item>
+                <Menu.Item key="adopcion"><Link to={Routes.ADOPCIONES}>Adopción</Link></Menu.Item>
                 <Menu.Item key="registroA">Registro Animal</Menu.Item>
             </SubMenu>
             <Menu.Item key='derechos' icon={<SmileOutlined />}>

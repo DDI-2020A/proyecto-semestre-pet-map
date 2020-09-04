@@ -1,4 +1,3 @@
-
 import React from 'react';
 import  {Button, Col, Row, Typography,} from "antd";
 import img1 from "../images/Captura1.PNG";
@@ -8,10 +7,10 @@ import Routes from "../constants/routes";
 const {Title} =Typography;
 
 
-const Registro = () => (
+const Adopciones = () => (
     <div>
-        Registro
+        Adopciones
     </div>
 );
 
-export default Registro;
+export default Adopciones;

@@ -1,7 +1,10 @@
 const publicRoutes = {
-    HOME: '/',
-    REGISTRO: '/registro',
+    RAIZ:'/',
+    HOME: 'home',
+    REGISTER: '/registro',
     INICIOSESION: '/inicioSesion',
+    DONACIONES: '/donaciones',
+    ADOPCIONES: '/adopciones',
 };
 
 const privateRoutes = {
