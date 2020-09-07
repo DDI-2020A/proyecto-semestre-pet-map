@@ -1,0 +1,24 @@
+body {
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 20px;
+
+}
+
+.title1{
+
+    text-align: center;
+    font-weight: bold;
+
+}
+.title2{
+
+}
+
+.paragraph{
+
+}

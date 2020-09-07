@@ -5,7 +5,8 @@ import Home from '../pages/Home';
 import Registro from '../pages/Registro';
 import Routes from '../constants/routes';
 import Adopciones from "../pages/Adopciones";
-
+import Donaciones from "../pages/Donaciones";
+import Derechos from "../pages/Derechos";
 const AppRouter = () => {
     return (
         <Switch>
@@ -24,7 +25,12 @@ const AppRouter = () => {
             <Route path={ Routes.ADOPCIONES }>
                 <Adopciones />
             </Route>
-
+            <Route path={ Routes.DONACIONES }>
+                <Donaciones />
+            </Route>
+            <Route path={ Routes.DERECHOS }>
+                <Derechos />
+            </Route>
         <Route path={ Routes.INICIOSESION }>
         </Route>
         </Switch>

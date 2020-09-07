@@ -5,6 +5,7 @@ const publicRoutes = {
     INICIOSESION: '/inicioSesion',
     DONACIONES: '/donaciones',
     ADOPCIONES: '/adopciones',
+    DERECHOS: '/derechos',
 };
 
 const privateRoutes = {

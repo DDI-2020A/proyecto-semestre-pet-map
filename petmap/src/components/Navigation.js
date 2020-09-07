@@ -27,11 +27,11 @@ const Navigation=()=>{
                 Noticias
             </Menu.Item>
             <SubMenu icon={<ApartmentOutlined />} title='servicios'>
-                <Menu.Item key="donaciones">Donaciones</Menu.Item>
+                <Menu.Item key="donaciones"><Link to={Routes.DONACIONES}>Donaciones</Link></Menu.Item>
                 <Menu.Item key="adopcion"><Link to={Routes.ADOPCIONES}>Adopción</Link></Menu.Item>
                 <Menu.Item key="registroA">Registro Animal</Menu.Item>
             </SubMenu>
-            <Menu.Item key='derechos' icon={<SmileOutlined />}>
+            <Menu.Item key='derechos' icon={<SmileOutlined />}><Link to={Routes.DERECHOS}></Link>
                 Derechos Animales
             </Menu.Item>
             <Menu.Item key='about' icon={<QuestionCircleOutlined />}>
