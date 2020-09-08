@@ -1,15 +1,17 @@
 import React from "react";
-import { Card, Col, Row } from 'antd';
+import { Card, Col, Row, paragraph} from 'antd';
 import img1 from "../images/perrodonaciones.svg";
 import img2 from "../images/gatodonaciones.svg";
 import { Button } from 'antd';
-import donaciones from "../styles/donaciones.css";
+import donacion from "../styles/donaciones.css";
 
 
 
-const Adopciones = () => (
+const Donaciones = () => (
 
     <div className="site-card-wrapper">
+
+
         <Row gutter={16}>
             <Col span={8}>
                 <Card  className='card '>
@@ -17,16 +19,14 @@ const Adopciones = () => (
                 </Card>
             </Col>
             <Col span={8}>
-                <Card title="DONACIONES"  className='cardopction '>
-                    <Row gutter={16}>
-                        <Col span={8}><Button type="primary">Donaciones físicas</Button></Col>
-                        </Row>
-                    <Row gutter={16}>
-                        <Col span={8}><Button type="primary">Transferencia Bancaria</Button></Col>
-                    </Row>
-                    <Row gutter={16}>
-                        <Col span={8}><Button type="primary">Débito bancario</Button></Col>
-                    </Row>
+                <Card  className='card'>
+                    <h1>DONACIONES</h1>
+                    <Button type="primary" className='buttonoption'>Donaciones físicas</Button>
+                    <Button type="primary" className='buttonoption'>Donaciones Transferencia bancaria</Button>
+                    <Button type="primary" className='buttonoption'>Donaciones Débito bancario</Button>
+                    <paragraph classname='paragraphfrase'>A veces sentimos que lo que hacemos es tan solo una gota en el mar, pero el mar seria menos si le faltara esa gota</paragraph>
+                    <paragraph>(Madre Teresa de Calcuta).</paragraph>
+
 
                 </Card>
             </Col>
@@ -41,4 +41,4 @@ const Adopciones = () => (
 
 );
 
-export default Adopciones;
+export default Donaciones;
