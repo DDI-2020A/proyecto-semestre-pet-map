@@ -28,15 +28,14 @@ const Navigation=()=>{
             </Menu.Item>
             <SubMenu icon={<ApartmentOutlined />} title='servicios'>
                 <Menu.Item key="donaciones"><Link to={Routes.DONACIONES}>Donaciones</Link></Menu.Item>
-                <Menu.Item key="adopcion"><Link to={Routes.ADOPCIONES}>Adopción</Link></Menu.Item>
-                <Menu.Item key="registroA">Registro Animal</Menu.Item>
+                <Menu.Item key="adopcion"><Link to={Routes.ADOPTA}>Adopción</Link></Menu.Item>
+                <Menu.Item key="registroA"><Link to={Routes.REGISTROANIMAL}>Registro Animal</Link></Menu.Item>
             </SubMenu>
             <Menu.Item key='derechos' icon={<SmileOutlined />}><Link to={Routes.DERECHOS}></Link>
                 Derechos Animales
             </Menu.Item>
-            <Menu.Item key='about' icon={<QuestionCircleOutlined />}>
-                ¿Quienes Somos?
-            </Menu.Item>
+            <Menu.Item key='mision' icon={<QuestionCircleOutlined />} > <Link to={Routes.MISION}>¿Quienes Somons?</Link></Menu.Item>
+
     </Menu>
     );
 };

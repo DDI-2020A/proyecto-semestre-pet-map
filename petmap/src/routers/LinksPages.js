@@ -7,6 +7,10 @@ import Routes from '../constants/routes';
 import Adopciones from "../pages/Adopciones";
 import Donaciones from "../pages/Donaciones";
 import Derechos from "../pages/Derechos";
+import Regpet from "../pages/Regpet";
+import Galeria from "../pages/Galeria";
+import Mision from "../pages/Mision";
+
 const AppRouter = () => {
     return (
         <Switch>
@@ -30,6 +34,15 @@ const AppRouter = () => {
             </Route>
             <Route path={ Routes.DERECHOS }>
                 <Derechos />
+            </Route>
+            <Route path={ Routes.REGISTROANIMAL }>
+                <Regpet />
+            </Route>
+            <Route path={ Routes.ADOPTA }>
+                <Galeria />
+            </Route>
+            <Route path={ Routes.MISION }>
+                <Mision />
             </Route>
         <Route path={ Routes.INICIOSESION }>
         </Route>

@@ -1,3 +1,4 @@
+
 .fondo {
   position: absolute;
   background-image: url("../images/Fondo.PNG");
@@ -14,11 +15,11 @@
 }
 
 p {
-  font: oblique bold 120% cursive;
+  font: oblique bold 100% cursive;
 }
 
 h1 {
-  font: oblique bold 200% cursive;
+  font: oblique bold 120% cursive;
 }
 
 img {
@@ -27,4 +28,10 @@ img {
 
 .col-6 {
   padding-top: 50px;
+}
+
+.col-12 {
+  background: aquamarine;
+  text-align: center;
+  padding: 50px;
 }

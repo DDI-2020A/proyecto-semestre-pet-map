@@ -6,6 +6,9 @@ const publicRoutes = {
     DONACIONES: '/donaciones',
     ADOPCIONES: '/adopciones',
     DERECHOS: '/derechos',
+    REGISTROANIMAL: '/registroAnimal',
+    ADOPTA: '/adota',
+    MISION: '/mision',
 };
 
 const privateRoutes = {
