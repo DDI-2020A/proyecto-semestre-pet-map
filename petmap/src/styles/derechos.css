@@ -5,20 +5,24 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 20px;
 
 }
-
-.title1{
-
-    text-align: center;
-    font-weight: bold;
-
+.main_donations{
+    margin-top: 15px !important;
+    margin-left:50px !important;
 }
-.title2{
-
+h1{
+    font: oblique bold 250% cursive !important;
 }
-
+h2{
+    font: oblique bold 250% cursive !important;
+}
 .paragraph{
-
+    font: oblique bold 150% cursive !important;
+}
+li{
+    font: oblique bold 80% cursive !important;
+}
+p{
+    font: oblique bold 150% cursive !important;
 }

@@ -34,7 +34,7 @@ const Navigation=()=>{
             <Menu.Item key='derechos' icon={<SmileOutlined />}><Link to={Routes.DERECHOS}></Link>
                 Derechos Animales
             </Menu.Item>
-            <Menu.Item key='mision' icon={<QuestionCircleOutlined />} > <Link to={Routes.MISION}>¿Quienes Somons?</Link></Menu.Item>
+            <Menu.Item key='mision' icon={<QuestionCircleOutlined />} > <Link to={Routes.MISION}>¿Quienes Somos?</Link></Menu.Item>
 
     </Menu>
     );

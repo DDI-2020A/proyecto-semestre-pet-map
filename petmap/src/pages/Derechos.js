@@ -1,22 +1,22 @@
 import React from "react";
 import  {Button, Col, Row, Typography,} from "antd";
 import Routes from "../constants/routes";
-import derechosa from "../styles/derechos.css";
+import '../styles/derechos.css';
 
 const {Title,paragraph,text} =Typography;
 
 const derechos = () => {
     return (
-        <div>
-            <Title level = {1} className='title1 '>DERECHO ANIMAL</Title>
-            <Title level = {2} className='title2 '>REGLAMENTO NACIONAL DE TENDENCIA DE PERROS</Title>
+        <div className="main_donations">
+            <h1 level = {1} className='title1 '>DERECHO ANIMAL</h1>
+            <h2 level = {2} className='title2 '>REGLAMENTO NACIONAL DE TENDENCIA DE PERROS</h2>
 
-            <paragraph>En febrero de 2009, se elaboró el Acuerdo Interministerial para la Tenencia Responsable de Perros, el cual entró en vigencia en agosto del mismo año.
-            </paragraph>
-            <paragraph>En sus puntos principales el reglamento establece:
-            </paragraph>
+            <p>En febrero de 2009, se elaboró el Acuerdo Interministerial para la Tenencia Responsable de Perros, el cual entró en vigencia en agosto del mismo año.
+            </p>
+            <p>En sus puntos principales el reglamento establece:
+            </p>
 
-            <Title level = {2} className='title2 '>OBLIGACIONES</Title>
+            <h2 level = {2} className='title2 '>OBLIGACIONES</h2>
 
             <paragraph className='paragraph '>
                 <ul>
@@ -29,7 +29,7 @@ const derechos = () => {
                     </ul>
                 </paragraph>
 
-            <Title level = {2} className='title2 '>PROHIBICIONES</Title>
+            <h2 level = {2} className='title2 '>PROHIBICIONES</h2>
 
             <paragraph>
                 <ul>

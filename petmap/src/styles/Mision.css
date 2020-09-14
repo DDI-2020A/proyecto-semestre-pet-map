@@ -9,17 +9,21 @@
   height: 600px;
   opacity: 0.5;
 }
-
+.desarrolladores{
+  width: 150px;
+  height: 200px;
+  float: right;
+}
 .conten {
   position: absolute;
 }
 
 p {
-  font: oblique bold 100% cursive;
+  font: oblique bold 120% cursive;
 }
 
 h1 {
-  font: oblique bold 120% cursive;
+  font: oblique bold 160% cursive;
 }
 
 img {
@@ -31,7 +35,7 @@ img {
 }
 
 .col-12 {
-  background: aquamarine;
+  background: #019875;
   text-align: center;
   padding: 50px;
 }
