@@ -1,22 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="087de3f6-eda4-4640-b32a-e632738a8095" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/petmap/src/images/cat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petmap/src/pages/First_adop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petmap/src/pages/forms_adop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petmap/src/pages/sheet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petmap/src/styles/forms.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petmap/src/styles/sheet.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petmap/src/styles/First_adop.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petmap/craco.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/craco.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petmap/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/components/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petmap/src/components/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/components/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petmap/src/constants/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/constants/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petmap/src/pages/Adoptame.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/pages/Adoptame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petmap/src/pages/Derechos.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/pages/Derechos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petmap/src/pages/Donaciones.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/pages/Donaciones.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petmap/src/pages/First_adop.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/pages/First_adop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petmap/src/pages/Galeria.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/pages/Galeria.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petmap/src/pages/Mision.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/pages/Mision.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petmap/src/pages/forms_adop.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/pages/forms_adop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petmap/src/routers/LinksPages.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/routers/LinksPages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petmap/src/styles/Adoptame.css" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/styles/Adoptame.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petmap/src/styles/App.less" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/styles/App.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/styles/Mision.css" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/styles/Mision.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/styles/derechos.css" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/styles/derechos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petmap/src/styles/Galeria.css" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/styles/Galeria.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petmap/src/styles/Mision.css" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/styles/Mision.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petmap/src/styles/derechos.css" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/styles/derechos.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petmap/src/styles/donaciones.css" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/styles/donaciones.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petmap/src/styles/forms.less" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/styles/forms.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petmap/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/styles/index.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +51,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/petmap" />
   </component>
   <component name="ProjectId" id="1gjBJyOV9bJyIvkGuHrszYFgjvb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -34,7 +62,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../untitled5" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -43,6 +71,13 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\guill\WebstormProjects\proyecto-semestre-pet-map\petmap\src\images" />
+      <recent name="C:\Users\guill\WebstormProjects\proyecto-semestre-pet-map\petmap\src\styles" />
+      <recent name="C:\Users\guill\WebstormProjects\proyecto-semestre-pet-map\petmap\src\pages" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -72,7 +107,8 @@
       <workItem from="1598618054698" duration="650000" />
       <workItem from="1598811017577" duration="382000" />
       <workItem from="1600036460458" duration="7067000" />
-      <workItem from="1600051191723" duration="3881000" />
+      <workItem from="1600051191723" duration="4304000" />
+      <workItem from="1600090654094" duration="7417000" />
     </task>
     <servers />
   </component>
@@ -89,13 +125,18 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="409" y="53" key="FileChooserDialogImpl" timestamp="1600043876183">
+    <state x="352" y="142" key="EditFileWatcherDialog" timestamp="1600098531875">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="352" y="142" key="EditFileWatcherDialog/0.0.1366.728@0.0.1366.728" timestamp="1600098531875" />
+    <state x="409" y="53" key="FileChooserDialogImpl" timestamp="1600100821068">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="327" y="42" key="FileChooserDialogImpl/0.0.1093.574@0.0.1093.574" timestamp="1598811411186" />
-    <state x="409" y="53" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1600043876183" />
+    <state x="409" y="53" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1600100821068" />
     <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1600051078947">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

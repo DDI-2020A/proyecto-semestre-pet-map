@@ -3,7 +3,7 @@ import { Card, Col, Row, paragraph} from 'antd';
 import img1 from "../images/perrodonaciones.svg";
 import img2 from "../images/gatodonaciones.svg";
 import { Button } from 'antd';
-import donacion from "../styles/donaciones.css";
+import donacion from "../styles/donaciones.less";
 
 
 

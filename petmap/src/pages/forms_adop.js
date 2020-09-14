@@ -1,5 +1,6 @@
 import React from 'react';
 import "../styles/forms.less";
+//import "../styles/App.less";
 import {Input, Button, Col,Layout, Row, Checkbox} from "antd";
 import {Link} from 'react-router-dom';
 import {EditOutlined,DingtalkOutlined} from '@ant-design/icons';

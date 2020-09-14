@@ -1,7 +1,7 @@
 import React from "react";
 import  {Button, Col, Row, Typography,} from "antd";
 import Routes from "../constants/routes";
-import '../styles/derechos.css';
+import '../styles/derechos.less';
 
 const {Title,paragraph,text} =Typography;
 

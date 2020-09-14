@@ -9,6 +9,8 @@ const publicRoutes = {
     REGISTROANIMAL: '/registroAnimal',
     ADOPTA: '/adota',
     MISION: '/mision',
+    REGADOP: '/Reg_adop',
+    FORMS: '/forms_adop',
 };
 
 const privateRoutes = {
