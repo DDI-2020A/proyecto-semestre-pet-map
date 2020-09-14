@@ -1,6 +1,11 @@
 import React from 'react';
 import '../styles/Mision.css';
 import dog from '../images/dog1.png';
+import d1 from "../images/Carlos.jpg";
+import d2 from "../images/Yoma.jpg";
+import d3 from "../images/Guillo.jpg";
+import d4 from "../images/Elvis.jpg";
+
 
 const Mision = () => {
 
@@ -25,7 +30,7 @@ const Mision = () => {
                     <h1>DESARROLLADORES</h1>
                     <div className="row">
                         <div className="col-6 card">
-                            <img src="..." className="card-img-top" alt="..."/>
+                            <img src={d1} className="desarrolladores" alt="..."/>
                             <div className="card-body">
                                 <h5 className="card-title">Carlos Montesdeoca</h5>
                                 <p className="card-text">Some quick example text to build on the card title and make
@@ -33,7 +38,7 @@ const Mision = () => {
                             </div>
                         </div>
                         <div className="col-6 card">
-                            <img src="..." className="card-img-top" alt="..."/>
+                            <img src={d2} className="desarrolladores" alt="..."/>
                             <div className="card-body">
                                 <h5 className="card-title">Yomara Diaz</h5>
                                 <p className="card-text">Some quick example text to build on the card title and make
@@ -41,7 +46,7 @@ const Mision = () => {
                             </div>
                         </div>
                         <div className="col-6 card">
-                            <img src="..." className="card-img-top" alt="..."/>
+                            <img src={d3} className="desarrolladores" alt="..."/>
                             <div className="card-body">
                                 <h5 className="card-title">Guillermo Rivera</h5>
                                 <p className="card-text">Some quick example text to build on the card title and make
@@ -49,7 +54,7 @@ const Mision = () => {
                             </div>
                         </div>
                         <div className="col-6 card">
-                            <img src="..." className="card-img-top" alt="..."/>
+                            <img src={d4} className="desarrolladores" alt="..."/>
                             <div className="card-body">
                                 <h5 className="card-title">Elvis Agila</h5>
                                 <p className="card-text">Some quick example text to build on the card title and make

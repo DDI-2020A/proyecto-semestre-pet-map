@@ -19,7 +19,10 @@ const suffix = (
 const Galeria = () => {
 
     const [base, setBase] = useState([]);
-    const [tipo, setTipo] = useState('');
+    const [Tipo, setTipo] = useState('');
+    const [ID, setId] = useState('');
+    const [Street, setStreet] = useState('');
+    const [Image, setImage] = useState('');
 
     useEffect(() => {
         const getPet = async () => {
@@ -29,7 +32,18 @@ const Galeria = () => {
             console.log('Mascotas', jsonPet);
         };
         getPet();
-    }, [tipo]);
+    }, [Tipo]);
+
+    const handleVer = (tip, id, image, street) => {
+
+        setId(id);
+        setImage(image);
+        setStreet(street);
+        setTipo(tip);
+        console.log('tipo', Tipo);
+        console.log('id', ID);
+        console.log('image', Image);
+    }
 
     return (
         <>
@@ -63,7 +77,7 @@ const Galeria = () => {
                                         title={cat.type}
                                         description={cat.id}
                                     />
-                                    <Button type="primaty">Ver </Button>
+                                    <Button type="primaty" onClick={ () => handleVer (cat.type, cat.id, cat.image, cat.street) } >Ver </Button>
                                 </Card>
                             </Col>
                         ))

@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import '../styles/Adoptame.css'
 import { Layout } from 'antd';
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -21,14 +22,25 @@ const Adoptame = () => {
 
     return (
         <>
-            <Layout>
-                <Header>Header</Header>
-                <Layout>
-                    <Sider>Sider</Sider>
-                    <Content>Content</Content>
-                </Layout>
-                <Footer>Footer</Footer>
-            </Layout>
+            <div className="form">
+                <div className="center id "> TIPO: </div>
+                <div className="row">
+                    <div className="col-6">
+                        <h5 className="center"> ID </h5>
+                        <img src="https://ichef.bbci.co.uk/news/ws/410/amz/worldservice/live/assets/images/2015/06/12/150612173542_mascota_promo_624x351_thinkstock.jpg" alt=""/>
+                    </div>
+                    <div className="col-6">
+                        <br/><br/>
+                        <p>ESTADO:</p>
+                        <p>Ubicacion</p>
+                        <p>Descrimpcion</p>
+                    </div>
+                    <div>
+                        <button>Adoptar</button>
+                        <button>Regresar</button>
+                    </div>
+                </div>
+            </div>
         </>
     );
 }
