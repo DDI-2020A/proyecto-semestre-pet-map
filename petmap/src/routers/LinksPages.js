@@ -9,12 +9,10 @@ import Derechos from "../pages/Derechos";
 import Regpet from "../pages/Regpet";
 import Galeria from "../pages/Galeria";
 import Mision from "../pages/Mision";
-<<<<<<< HEAD
 import Reg_Adop from "../pages/First_adop";
 import forms_adop from "../pages/forms_adop";
-=======
 import InicioSesion from "../pages/InicioSesion";
->>>>>>> e271b9434e127f87878f948130383e3fd88eb0c1
+
 
 const AppRouter = () => {
     return (

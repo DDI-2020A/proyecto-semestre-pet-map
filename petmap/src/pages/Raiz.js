@@ -23,10 +23,8 @@ const Raiz = () => (
                         <Title className='title1'>PET  MAP</Title>
                         <Title level = {2} className='title2 '>TU ACCIÓN PUEDE CAMBIAR VIDAS</Title>
 
-                        <Button type="primary" shape="round" >
-                            REGISTRARSE
-                        </Button><br/><br/>
-                        <Button type="primary" shape="round" >
+                        <Button type="btn btn-access" shape="round" >REGISTRARSE</Button><br/><br/>
+                        <Button type="btn btn-access" shape="round" >
                             <Link to={Routes.INICIOSESION} >INICIAR SESIÓN</Link>
                         </Button>
                     </div>

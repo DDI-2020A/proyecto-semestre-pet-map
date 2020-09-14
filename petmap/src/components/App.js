@@ -1,9 +1,7 @@
 import React from 'react';
-
 import '../styles/App.less';
 import {BrowserRouter as Router, Link} from 'react-router-dom';
 import {Layout, Row, Col, Button,Typography} from 'antd';
-
 import logo from '../images/Logo.PNG';
 import Navigation from "./Navigation";
 import Routes from "../constants/routes";
@@ -18,7 +16,7 @@ const {Title} =Typography;
 const App = () => {
 
     return (
-        <Router>
+        <Router className="body">
             <Layout className='layout'>
                 <Header className='main-header'>
                     <div className='logo'>
