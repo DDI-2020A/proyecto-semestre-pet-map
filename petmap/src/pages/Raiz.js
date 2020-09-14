@@ -1,10 +1,13 @@
 import React from 'react';
+import "../styles/Raiz.less";
 import  {Button, Col, Row, Typography,} from "antd";
 import img1 from "../images/Captura1.svg";
 import {Link} from "react-router-dom";
 import Routes from "../constants/routes";
 
 const {Title} =Typography;
+
+
 
 const Raiz = () => (
     <div>
@@ -20,11 +23,11 @@ const Raiz = () => (
                         <Title className='title1'>PET  MAP</Title>
                         <Title level = {2} className='title2 '>TU ACCIÓN PUEDE CAMBIAR VIDAS</Title>
 
-                        <Link to={Routes.REGISTER}><Button type="primary" shape="round" >
-                            REGISTRARSE
-                        </Button></Link><br/><br/>
                         <Button type="primary" shape="round" >
-                            INICIAR SESIÓN
+                            REGISTRARSE
+                        </Button><br/><br/>
+                        <Button type="primary" shape="round" >
+                            <Link to={Routes.INICIOSESION} >INICIAR SESIÓN</Link>
                         </Button>
                     </div>
                 </div>
