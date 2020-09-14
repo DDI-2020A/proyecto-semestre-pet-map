@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Raiz from "../pages/Raiz";
 import Home from '../pages/Home';
-import Registro from '../pages/Registro';
 import Routes from '../constants/routes';
 import Adopciones from "../pages/Adopciones";
 import Donaciones from "../pages/Donaciones";
@@ -10,8 +9,12 @@ import Derechos from "../pages/Derechos";
 import Regpet from "../pages/Regpet";
 import Galeria from "../pages/Galeria";
 import Mision from "../pages/Mision";
+<<<<<<< HEAD
 import Reg_Adop from "../pages/First_adop";
 import forms_adop from "../pages/forms_adop";
+=======
+import InicioSesion from "../pages/InicioSesion";
+>>>>>>> e271b9434e127f87878f948130383e3fd88eb0c1
 
 const AppRouter = () => {
     return (
@@ -22,24 +25,21 @@ const AppRouter = () => {
         <Route path={ Routes.HOME }>
            <Home />
         </Route>
-        <Route path={ Routes.REGISTER }>
-            <Registro />
+        <Route path={ Routes.INICIOSESION }>
+           <InicioSesion />
         </Route>
-        <Route path={ Routes.REGISTER }>
-            <Registro />
-        </Route>
-            <Route path={ Routes.ADOPCIONES }>
-                <Adopciones />
-            </Route>
-            <Route path={ Routes.DONACIONES }>
+        <Route path={ Routes.DONACIONES }>
                 <Donaciones />
-            </Route>
-            <Route path={ Routes.DERECHOS }>
-                <Derechos />
-            </Route>
-            <Route path={ Routes.REGISTROANIMAL }>
-                <Regpet />
-            </Route>
+        </Route>
+        <Route path={ Routes.DERECHOS }>
+               <Derechos />
+        </Route>
+        <Route path={ Routes.ADOPCIONES }>
+                <Adopciones />
+        </Route>
+        <Route path={ Routes.REGISTROANIMAL }>
+               <Regpet />
+        </Route>
             <Route path={ Routes.ADOPTA }>
                 <Galeria />
             </Route>
