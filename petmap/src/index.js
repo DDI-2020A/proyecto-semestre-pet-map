@@ -2,10 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
-import Derechos from "./pages/Derechos";
-import Mision from "./pages/Mision";
-import Galeria from "./pages/Galeria";
-import Regpet from "./pages/Regpet";
+import Adoptame from "./pages/Adoptame";
 
 ReactDOM.render(
     <React.StrictMode>
