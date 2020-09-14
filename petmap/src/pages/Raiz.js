@@ -7,8 +7,6 @@ import Routes from "../constants/routes";
 
 const {Title} =Typography;
 
-
-
 const Raiz = () => (
     <div>
         <Row>

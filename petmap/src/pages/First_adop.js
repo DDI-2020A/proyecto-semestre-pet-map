@@ -32,7 +32,7 @@ const First_adop = () => {
                           <br /><br /><br />
                           <Input size="large" placeholder="Correo"prefix={<UserOutlined />} />
                           <br /><br /><br />
-                          <Link to={ROUTES.FORMS}><Button className={"ingreso"} type="primary" >Ingresar</Button></Link>
+                          <Button className={"ingreso"} type="primary" ><Link to={ROUTES.FORMS}>Ingresar</Link></Button>
                       </Col>
                   </Row>
               </div>
