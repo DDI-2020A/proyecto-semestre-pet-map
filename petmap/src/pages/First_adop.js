@@ -2,13 +2,14 @@ import React from 'react';
 import "../styles/App.less";
 import {Button, Col,Layout, Row, Input} from "antd";
 import {UserOutlined,EditOutlined} from '@ant-design/icons';
-import {Link} from 'react-router-dom';
-import {Route} from "react-router-dom";
-import forms from "./First_adop";
+//import {Link} from 'react-router-dom';
+//import {Route} from "react-router-dom";
 
-const {Content,Footer} = Layout;
+
+const {Content} = Layout;
 
 const First_adop = () => {
+
   return (
       <layout className='layout'>
         <Content className='main-content mb-3'>
@@ -28,11 +29,11 @@ const First_adop = () => {
                           <br />
                           <Input size="large" placeholder="Apellido" prefix={<UserOutlined />} />
                           <br /><br /><br />
-                          <Input size="large" placeholder="Nombre"prefix={<UserOutlined />} />
+                          <Input size="large" placeholder="Nombre" prefix={<UserOutlined />} />
                           <br /><br /><br />
-                          <Input size="large" placeholder="C.I"prefix={<UserOutlined />} />
+                          <Input size="large" placeholder="C.I" prefix={<UserOutlined />} />
                           <br /><br /><br />
-                          <Input size="large" placeholder="Correo"prefix={<UserOutlined />} />
+                          <Input size="large" placeholder="Correo" prefix={<UserOutlined />} />
                           <br /><br /><br />
                           <Button className={"ingreso"} type="primary" >Ingresar</Button>
                       </Col>
@@ -41,16 +42,9 @@ const First_adop = () => {
             </Col>
           </Row>
         </Content>
-          <Footer className={"footer"}>
-              <Row>
-                  <Col span={8}><p>0960625886</p></Col>
-                  <Col span={8}><p>Pet Map - Derechos Reservados</p></Col>
-                  <Col span={8}><p>You tube</p></Col>
-              </Row>
-          </Footer>
       </layout>
 
   );
-}
+};
 
 export default First_adop;
