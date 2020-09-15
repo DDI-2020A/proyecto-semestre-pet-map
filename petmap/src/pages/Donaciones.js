@@ -3,14 +3,12 @@ import { Card, Col, Row} from 'antd';
 import img1 from "../images/perrodonaciones.svg";
 import img2 from "../images/gatodonaciones.svg";
 import { Button } from 'antd';
-<<<<<<< HEAD
+
 import Routes from "../constants/routes";
 import {Link} from 'react-router-dom';
 import "../styles/donaciones.less";
 
-=======
-import "../styles/donaciones.less";
->>>>>>> 1f762f7cff22b8819851b652b27006e5cf5ffa80
+
 
 
 
@@ -19,9 +17,7 @@ const Donaciones = () => (
     <div className="site-card-wrapper">
         <Row gutter={16}>
             <Col span={8}>
-                <Card  className='card '>
                     <img src={img1} alt="perrodonaciones"/>
-                </Card>
             </Col>
             <Col span={8}>
                 <Card  className='card'>
