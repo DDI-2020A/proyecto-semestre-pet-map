@@ -5,9 +5,11 @@ import {UserOutlined,EditOutlined} from '@ant-design/icons';
 import {Link} from 'react-router-dom';
 import ROUTES from '../constants/routes';
 
+
 const {Content} = Layout;
 
 const First_adop = () => {
+
   return (
       <layout className='layout'>
         <Content className='main-content mb-3'>
@@ -26,11 +28,11 @@ const First_adop = () => {
                           <br />
                           <Input size="large" placeholder="Apellido" prefix={<UserOutlined />} />
                           <br /><br /><br />
-                          <Input size="large" placeholder="Nombre"prefix={<UserOutlined />} />
+                          <Input size="large" placeholder="Nombre" prefix={<UserOutlined />} />
                           <br /><br /><br />
-                          <Input size="large" placeholder="C.I"prefix={<UserOutlined />} />
+                          <Input size="large" placeholder="C.I" prefix={<UserOutlined />} />
                           <br /><br /><br />
-                          <Input size="large" placeholder="Correo"prefix={<UserOutlined />} />
+                          <Input size="large" placeholder="Correo" prefix={<UserOutlined />} />
                           <br /><br /><br />
                           <Button className={"ingreso"} type="primary" ><Link to={ROUTES.FORMS}>Ingresar</Link></Button>
                       </Col>
@@ -42,6 +44,6 @@ const First_adop = () => {
       </layout>
 
   );
-}
+};
 
 export default First_adop;

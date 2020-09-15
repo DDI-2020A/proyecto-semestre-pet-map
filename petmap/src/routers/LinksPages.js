@@ -5,6 +5,9 @@ import Home from '../pages/Home';
 import Routes from '../constants/routes';
 import Adopciones from "../pages/Adopciones";
 import Donaciones from "../pages/Donaciones";
+import Donacionesfisicas from "../pages/Donacionesfisicas";
+import Donacionestransferencia from "../pages/Donacionestransferencia";
+import Donacionesdebito from "../pages/Donacionesdebito";
 import Derechos from "../pages/Derechos";
 import Regpet from "../pages/Regpet";
 import Galeria from "../pages/Galeria";
@@ -12,7 +15,6 @@ import Mision from "../pages/Mision";
 import Reg_Adop from "../pages/First_adop";
 import forms_adop from "../pages/forms_adop";
 import InicioSesion from "../pages/InicioSesion";
-
 
 const AppRouter = () => {
     return (
@@ -29,6 +31,20 @@ const AppRouter = () => {
         <Route path={ Routes.DONACIONES }>
                 <Donaciones />
         </Route>
+
+            <Route path={Routes.DONACIONESDEBITO}>
+                <Donacionesdebito/>
+            </Route>
+
+            <Route path={Routes.DONACIONESTRANSFERENCIA}>
+                <Donacionestransferencia/>
+            </Route>
+
+            <Route path={Routes.DONACIONESFISICAS}>
+                <Donacionesfisicas/>
+            </Route>
+
+
         <Route path={ Routes.DERECHOS }>
                <Derechos />
         </Route>
