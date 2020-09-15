@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import '../styles/Galeria.css';
+import '../styles/Galeria.less';
 import {Card,  Row, Col, Button, Radio, Input, Pagination  } from 'antd';
 import { AudioOutlined } from '@ant-design/icons';
 

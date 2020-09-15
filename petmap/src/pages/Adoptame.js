@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import '../styles/Adoptame.css'
+import '../styles/Adoptame.less'
 import { Layout } from 'antd';
 
 const { Header, Footer, Sider, Content } = Layout;

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Mision.css';
+import '../styles/Mision.less';
 import dog from '../images/dog1.png';
 import d1 from "../images/Carlos.jpg";
 import d2 from "../images/Yoma.jpg";

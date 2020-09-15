@@ -12,7 +12,10 @@ import Derechos from "../pages/Derechos";
 import Regpet from "../pages/Regpet";
 import Galeria from "../pages/Galeria";
 import Mision from "../pages/Mision";
+import Reg_Adop from "../pages/First_adop";
+import forms_adop from "../pages/forms_adop";
 import InicioSesion from "../pages/InicioSesion";
+
 const AppRouter = () => {
     return (
         <Switch>
@@ -56,6 +59,12 @@ const AppRouter = () => {
             </Route>
             <Route path={ Routes.MISION }>
                 <Mision />
+            </Route>
+            <Route path={ Routes.REGADOP }>
+                <Reg_Adop />
+            </Route>
+            <Route path={ Routes.FORMS }>
+                <forms_adop />
             </Route>
         <Route path={ Routes.INICIOSESION }>
         </Route>

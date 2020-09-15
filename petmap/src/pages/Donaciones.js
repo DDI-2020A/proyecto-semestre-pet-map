@@ -3,9 +3,11 @@ import { Card, Col, Row, paragraph} from 'antd';
 import img1 from "../images/perrodonaciones.svg";
 import img2 from "../images/gatodonaciones.svg";
 import { Button } from 'antd';
-import "../styles/donaciones.css";
 import Routes from "../constants/routes";
 import {Link} from 'react-router-dom';
+import "../styles/donaciones.less";
+
+
 
 
 const Donaciones = () => (
