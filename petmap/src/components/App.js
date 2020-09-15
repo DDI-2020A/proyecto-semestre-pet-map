@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/App.less';
 import {BrowserRouter as Router, Link} from 'react-router-dom';
 import {Layout, Row, Col, Button,Typography} from 'antd';
-import Logo from '../images/Logo.svg';
+import Logo from '../images/logo.svg';
 import Navigation from "./Navigation";
 import Routes from "../constants/routes";
 import AppRouter from "../routers/LinksPages";

@@ -2,7 +2,7 @@ import React from "react";
 
 import "../styles/InicioSesion.less";
 import { Col, Row,Form, Input, Button, Checkbox,Typography} from "antd";
-import imgP from "../images/Logo.PNG";
+import imgP from "../images/logo.svg";
 
 const { Title } = Typography;
 
@@ -36,9 +36,6 @@ const InicioSesion = () =>{
             </Col>
             <Col span = {9}>
                 <div className='box'>
-
-
-
                         <Form
 
                             {...layout}
@@ -47,11 +44,20 @@ const InicioSesion = () =>{
                             onFinish={onFinish}
                             onFinishFailed={onFinishFailed}
                         >
-                            <Title className='titlePp'>Inicio de Sesión</Title>
+                            <Title className='titlePI'>Inicio de Sesión</Title>
                             <Form.Item
                                 label="Email"
-                                name="username"
-                                rules={[{ required: true, message: 'Please input your username!' }]}
+                                name="email"
+                                rules={[
+                                {
+                                    type: 'email',
+                                    message: 'The input is not valid E-mail!',
+                                },
+                                {
+                                    required: true,
+                                    message: 'Please input your E-mail!',
+                                },
+                            ]}
                             >
                                 <Input />
                             </Form.Item>

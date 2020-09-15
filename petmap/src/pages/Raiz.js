@@ -1,14 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "../styles/Raiz.less";
-import  {Button, Col, Row, Typography,} from "antd";
+import  {Modal,Button, Col, Row, Typography,} from "antd";
 import img1 from "../images/Captura1.svg";
 import {Link} from "react-router-dom";
 import Routes from "../constants/routes";
+import FormRegistro from "../components/FormRegistro";
 
 const {Title} =Typography;
 
-const Raiz = () => (
-    <div>
+const Raiz = () => {
+
+
+    const [ modalVisible, setModalVisible ] = useState( false );
+
+    const handleVisibleModal = () => {
+        setModalVisible(true);
+    };
+    return(<div>
         <Row>
             <Col span = {15}>
                 <div className='imgPp'>
@@ -21,7 +29,21 @@ const Raiz = () => (
                         <Title className='title1'>PET  MAP</Title>
                         <Title level = {2} className='title2 '>TU ACCIÓN PUEDE CAMBIAR VIDAS</Title>
 
-                        <Button type="btn btn-access" shape="round" >REGISTRARSE</Button><br/><br/>
+                        <Button type="btn btn-access" shape="round" onClick={handleVisibleModal}>REGISTRARSE</Button><br/><br/>
+                        <Modal
+                            title='Registro '
+                            visible={ modalVisible }
+                            onOk={ () => setModalVisible( false ) }
+                            onCancel={ () => setModalVisible( false ) }
+                            width={ 900 }
+                            footer={ null }
+                        >
+                            <div className="formuRegistro">
+                                <FormRegistro/>
+                            </div>
+
+                        </Modal>
+
                         <Button type="btn btn-access" shape="round" >
                             <Link to={Routes.INICIOSESION} >INICIAR SESIÓN</Link>
                         </Button>
@@ -32,6 +54,6 @@ const Raiz = () => (
 
     </div>
 );
-
+};
 export default Raiz;
 
