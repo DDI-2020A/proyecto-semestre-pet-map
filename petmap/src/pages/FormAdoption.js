@@ -62,13 +62,6 @@ const forms = () => {
                 </Row>
 
             </Content>
-            <Footer className={"footer"}>
-                <Row>
-                    <Col span={8}><p>0960625886</p></Col>
-                    <Col span={8}><p>Pet Map - Derechos Reservados</p></Col>
-                    <Col span={8}><p>You tube</p></Col>
-                </Row>
-            </Footer>
         </layout>
 
     );

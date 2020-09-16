@@ -8,7 +8,7 @@ import ROUTES from '../constants/routes';
 
 const {Content} = Layout;
 
-const First_adop = () => {
+const FirstAdoption = () => {
 
   return (
       <layout className='layout'>
@@ -34,7 +34,7 @@ const First_adop = () => {
                           <br /><br /><br />
                           <Input size="large" placeholder="Correo" prefix={<UserOutlined />} />
                           <br /><br /><br />
-                          <Button className={"ingreso"} type="primary" ><Link to={ROUTES.FORMS}>Ingresar</Link></Button>
+                          <Button className={"ingreso"} type="primary" ><Link to={ROUTES.FORMADOPTION}>Ingresar</Link></Button>
                       </Col>
                   </Row>
               </div>
@@ -46,4 +46,4 @@ const First_adop = () => {
   );
 };
 
-export default First_adop;
+export default FirstAdoption;
