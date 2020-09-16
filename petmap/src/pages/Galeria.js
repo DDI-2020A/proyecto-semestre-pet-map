@@ -43,6 +43,8 @@ const Galeria = () => {
         console.log('tipo', Tipo);
         console.log('id', ID);
         console.log('image', Image);
+        console.log('street', street);
+
     }
 
     return (

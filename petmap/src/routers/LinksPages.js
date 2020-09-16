@@ -9,7 +9,7 @@ import Donacionesfisicas from "../pages/Donacionesfisicas";
 import Donacionestransferencia from "../pages/Donacionestransferencia";
 import Donacionesdebito from "../pages/Donacionesdebito";
 import Derechos from "../pages/Derechos";
-import Regpet from "../pages/Regpet";
+import RegisterPet from "../pages/RegisterPet";
 import Galeria from "../pages/Galeria";
 import Mision from "../pages/Mision";
 import FirstAdoption from "../pages/FirstAdoption";
@@ -53,7 +53,7 @@ const AppRouter = () => {
                 <Adopciones />
         </Route>
         <Route path={ Routes.REGISTROANIMAL }>
-               <Regpet />
+               <RegisterPet />
         </Route>
             <Route path={ Routes.ADOPTA }>
                 <Galeria />
