@@ -87,14 +87,7 @@ const InicioSesion = () =>{
                             </Form.Item>
 
                         </Form>
-
-
-
-                    </div>
-                </Col>
-            </Row>
-
-        </div>
+      </div>
 
     );
 
