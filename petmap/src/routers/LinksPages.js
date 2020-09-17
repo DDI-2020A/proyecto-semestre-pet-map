@@ -9,12 +9,13 @@ import Donacionesfisicas from "../pages/Donacionesfisicas";
 import Donacionestransferencia from "../pages/Donacionestransferencia";
 import Donacionesdebito from "../pages/Donacionesdebito";
 import Derechos from "../pages/Derechos";
-import Regpet from "../pages/Regpet";
+import RegisterPet from "../pages/RegisterPet";
 import Galeria from "../pages/Galeria";
 import Mision from "../pages/Mision";
-import Reg_Adop from "../pages/First_adop";
-import forms_adop from "../pages/forms_adop";
+import FirstAdoption from "../pages/FirstAdoption";
+import FormAdoption from "../pages/FormAdoption";
 import InicioSesion from "../pages/InicioSesion";
+
 
 const AppRouter = () => {
     return (
@@ -52,7 +53,7 @@ const AppRouter = () => {
                 <Adopciones />
         </Route>
         <Route path={ Routes.REGISTROANIMAL }>
-               <Regpet />
+               <RegisterPet />
         </Route>
             <Route path={ Routes.ADOPTA }>
                 <Galeria />
@@ -60,11 +61,11 @@ const AppRouter = () => {
             <Route path={ Routes.MISION }>
                 <Mision />
             </Route>
-            <Route path={ Routes.REGADOP }>
-                <Reg_Adop />
+            <Route path={ Routes.FIRSTADOPTION }>
+                <FirstAdoption />
             </Route>
-            <Route path={ Routes.FORMS }>
-                <forms_adop />
+            <Route path={ Routes.FORMADOPTION }>
+                <FormAdoption />
             </Route>
         <Route path={ Routes.INICIOSESION }>
         </Route>

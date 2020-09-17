@@ -21,7 +21,7 @@ const Navigation=()=>{
                 <Link to={Routes.HOME}>Home</Link>
             </Menu.Item>
             <Menu.Item key='registro' icon={<FormOutlined />}>
-                <Link to={Routes.REGADOP}>Registro Adopción</Link>
+                <Link to={Routes.FIRSTADOPTION}>Registro Adopción</Link>
             </Menu.Item>
             <Menu.Item key='noticias' icon={<NotificationOutlined />}>
                 Noticias

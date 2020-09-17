@@ -32,7 +32,7 @@ const Mision = () => {
                         <div className="col-6 card">
                             <img src={d1} className="desarrolladores" alt="..."/>
                             <div className="card-body">
-                                <h5 className="card-title">Carlos Montesdeoca</h5>
+                                <h3 className="card-title">Carlos Montesdeoca</h3>
                                 <p className="card-text">Some quick example text to build on the card title and make
                                     up the bulk of the card's content.</p>
                             </div>
@@ -40,7 +40,7 @@ const Mision = () => {
                         <div className="col-6 card">
                             <img src={d2} className="desarrolladores" alt="..."/>
                             <div className="card-body">
-                                <h5 className="card-title">Yomara Diaz</h5>
+                                <h3 className="card-title">Yomara Diaz</h3>
                                 <p className="card-text">Some quick example text to build on the card title and make
                                     up the bulk of the card's content.</p>
                             </div>
@@ -48,7 +48,7 @@ const Mision = () => {
                         <div className="col-6 card">
                             <img src={d3} className="desarrolladores" alt="..."/>
                             <div className="card-body">
-                                <h5 className="card-title">Guillermo Rivera</h5>
+                                <h3 className="card-title">Guillermo Rivera</h3>
                                 <p className="card-text">Some quick example text to build on the card title and make
                                     up the bulk of the card's content.</p>
                             </div>
@@ -56,7 +56,7 @@ const Mision = () => {
                         <div className="col-6 card">
                             <img src={d4} className="desarrolladores" alt="..."/>
                             <div className="card-body">
-                                <h5 className="card-title">Elvis Agila</h5>
+                                <h3 className="card-title">Elvis Agila</h3>
                                 <p className="card-text">Some quick example text to build on the card title and make
                                     up the bulk of the card's content.</p>
                             </div>

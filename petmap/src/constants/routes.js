@@ -1,6 +1,6 @@
 const publicRoutes = {
     RAIZ:'/',
-    HOME: 'Home',
+    HOME: '/Home',
     REGISTER: '/registro',
     INICIOSESION: '/inicioSesion',
     DONACIONES: '/donaciones',
@@ -12,8 +12,8 @@ const publicRoutes = {
     REGISTROANIMAL: '/registroAnimal',
     ADOPTA: '/adota',
     MISION: '/mision',
-    REGADOP: '/Reg_adop',
-    FORMS: '/forms_adop',
+    FIRSTADOPTION: '/FirstAdoption',
+    FORMADOPTION: '/FormAdoption',
 
 };
 
