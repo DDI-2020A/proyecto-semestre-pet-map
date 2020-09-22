@@ -128,7 +128,7 @@ const RegisterPet = () => {
                             </Form.Item>
 
                             <Form.Item wrapperCol={{ span: 12, offset: 6 }}>
-                                <Button className="submit" type="primary" htmlType="submit">
+                                <Button className="submit-pet" type="primary" htmlType="submit">
                                     Registrar
                                 </Button>
                             </Form.Item>
