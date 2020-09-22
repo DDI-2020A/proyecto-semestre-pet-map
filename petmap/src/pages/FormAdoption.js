@@ -1,6 +1,6 @@
 import React from 'react';
 import "../styles/forms.less";
-import {Input, Button, Col,Layout, Row, Checkbox} from "antd";
+import {Input, Button, Col, Layout, Row, Checkbox, Form} from "antd";
 import {Link} from 'react-router-dom';
 import {EditOutlined,DingtalkOutlined} from '@ant-design/icons';
 
@@ -23,38 +23,35 @@ const forms = () => {
 
                             <Row className='form'>
                                 <Col span={24}>
-                                    <br />
-                                    <DingtalkOutlined /><p>¿Ha tenido mascotas con anterioridad? </p>
+                                    <p><DingtalkOutlined />¿Ha tenido mascotas con anterioridad? </p>
                                     <Checkbox onChange={onChange}>Si</Checkbox>
                                     <Checkbox onChange={onChange}>No</Checkbox>
                                     <br /><br />
-                                    <DingtalkOutlined /><p>¿Cuenta con los recursos necesarios para mantener sano y contenta a su mascota? </p>
+                                    <p><DingtalkOutlined />¿Cuenta con los recursos necesarios para mantener sano y contenta a su mascota? </p>
                                     <Checkbox onChange={onChange}>Si</Checkbox>
                                     <Checkbox onChange={onChange}>No</Checkbox>
                                     <br /><br />
-                                    <DingtalkOutlined /><p>¿Les realiza el chequeo médico con regularidad? </p>
+                                    <p><DingtalkOutlined />¿Les realiza el chequeo médico con regularidad? </p>
                                     <Checkbox onChange={onChange}>Si</Checkbox>
                                     <Checkbox onChange={onChange}>No</Checkbox>
                                     <br /><br />
-                                    <DingtalkOutlined /><p>¿Cuenta con espacio suficiente en su vivienda para tener una mascota? </p>
+                                    <p><DingtalkOutlined />¿Cuenta con espacio suficiente en su vivienda para tener una mascota? </p>
                                     <Checkbox onChange={onChange}>Si</Checkbox>
                                     <Checkbox onChange={onChange}>No</Checkbox>
                                     <br /><br />
-                                    <DingtalkOutlined /><p>¿Cuántas veces al día los alimenta? </p>
+                                    <p><DingtalkOutlined />¿Cuántas veces al día los alimenta? </p>
                                     <Checkbox onChange={onChange}>Si</Checkbox>
                                     <Checkbox onChange={onChange}>No</Checkbox>
                                     <br /><br />
-                                    <DingtalkOutlined /><p>¿Por qué queire adoptar? </p>
+                                    <p><DingtalkOutlined />¿Por qué queire adoptar? </p>
                                     <Checkbox onChange={onChange}>Si</Checkbox>
                                     <Checkbox onChange={onChange}>No</Checkbox>
                                     <br /><br />
-                                    <DingtalkOutlined /><p>¿Cuántas personas conforman su núcleo familiar? </p>
-                                    <Input placeholder="ingrese un número"/>
+                                    <p><DingtalkOutlined />¿De cuánto es su ingreso monetario mensual? </p>
+                                    <Input placeholder="ingrese un número" type="color:black"/>
                                     <br /><br />
-                                    <DingtalkOutlined /><p>¿De cuánto es su ingreso monetario mensual? </p>
-                                    <Input placeholder="ingrese un número"/>
-                                    <br /><br />
-                                    <Link to="sheet.js"><Button type={'primary'}> Terminar </Button></Link>
+                                    <Link to="sheet.js"><Button type="btn btn-access"> Terminar </Button></Link>
+
                                 </Col>
                             </Row>
                         </div>

@@ -20,33 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="087de3f6-eda4-4640-b32a-e632738a8095" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/petmap/src/styles/First_adop.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/craco.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/craco.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/components/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/components/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/constants/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/constants/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/images/fondo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/images/fondo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/images/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/pages/Adoptame.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/pages/Adoptame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/pages/Derechos.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/pages/Derechos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/pages/Donaciones.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/pages/Donaciones.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/pages/First_adop.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/pages/First_adop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/pages/Galeria.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/pages/Galeria.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/pages/InicioSesion.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/pages/InicioSesion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/pages/Mision.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/pages/Mision.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/pages/Raiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/pages/Raiz.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/pages/Registro.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/routers/LinksPages.js" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/routers/LinksPages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/styles/Adoptame.css" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/styles/Adoptame.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/styles/App.less" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/styles/App.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/styles/Galeria.css" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/styles/Galeria.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/styles/Mision.css" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/styles/Mision.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/styles/derechos.css" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/styles/derechos.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/styles/donaciones.css" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/styles/donaciones.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/styles/forms.less" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/styles/forms.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petmap/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/petmap/src/styles/index.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +28,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/petmap" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1gjBJyOV9bJyIvkGuHrszYFgjvb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -65,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../untitled5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -112,6 +86,12 @@
       <workItem from="1600036460458" duration="7067000" />
       <workItem from="1600051191723" duration="4304000" />
       <workItem from="1600090654094" duration="20620000" />
+      <workItem from="1600568470367" duration="18000" />
+      <workItem from="1600568493730" duration="1060000" />
+      <workItem from="1600593348217" duration="4489000" />
+      <workItem from="1600616315698" duration="1307000" />
+      <workItem from="1600789545089" duration="1358000" />
+      <workItem from="1600792386033" duration="1018000" />
     </task>
     <servers />
   </component>
@@ -135,11 +115,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="352" y="142" key="EditFileWatcherDialog/0.0.1366.728@0.0.1366.728" timestamp="1600098531875" />
-    <state x="409" y="53" key="FileChooserDialogImpl" timestamp="1600100821068">
+    <state x="409" y="53" key="FileChooserDialogImpl" timestamp="1600792381468">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="327" y="42" key="FileChooserDialogImpl/0.0.1093.574@0.0.1093.574" timestamp="1598811411186" />
-    <state x="409" y="53" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1600100821068" />
+    <state x="409" y="53" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1600792381468" />
     <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1600051078947">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
