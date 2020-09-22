@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import '../styles/App.less';
 import {BrowserRouter as Router, Link} from 'react-router-dom';
 import {Layout, Row, Col, Button,Typography} from 'antd';

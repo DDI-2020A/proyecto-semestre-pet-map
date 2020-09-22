@@ -1,7 +1,7 @@
 import app from 'firebase/app';
 // import 'firebase/auth';
 import 'firebase/database';
-// import 'firebase/storage';
+import 'firebase/storage';
 // import 'firebase/functions';
 
 console.log( 'ENV', process.env.NODE_ENV );
@@ -22,12 +22,13 @@ app.initializeApp( config );
 // export default app;
 // const auth = app.auth();
 const db = app.database();
-// export const storage = app.storage();
+const storage = app.storage();
 // export const functions = app.functions();
 
 
 const FIREBASE = {
-    db
+    db,
+    storage
 }
 
 export default FIREBASE;

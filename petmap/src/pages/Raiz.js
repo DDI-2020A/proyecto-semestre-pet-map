@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import "../styles/Raiz.less";
-import  {Modal,Button, Col, Row, Typography,} from "antd";
+import {Modal, Button, Col, Row, Typography, message,} from "antd";
 import img1 from "../images/Captura1.svg";
 import {Link} from "react-router-dom";
 import Routes from "../constants/routes";
 import FormRegistro from "../components/FormRegistro";
+import FIREBASE from "../firebase";
 
 const {Title} =Typography;
 
@@ -16,7 +17,24 @@ const Raiz = () => {
     const handleVisibleModal = () => {
         setModalVisible(true);
     };
-    return(<div>
+    const handleNoVisibleModal = () => {
+        setModalVisible(false);
+    };
+    const handleCreateUser = async( values ) => {
+        console.log( 'form values', values );
+        await FIREBASE.db.ref( `users` ).push( {
+
+            email: values.email.toLowerCase(),
+            password: values.password,
+            nombre: values.nombre.toUpperCase(),
+            apellido: values.apellido,
+            telefono: values.telefono,
+
+        } );
+        message.success( 'Los datos se guardaron correctamente :)' );
+    };
+    return(
+        <>
             <Row>
                 <Col span = {15}>
                     <div className='imgPp'>
@@ -33,13 +51,14 @@ const Raiz = () => {
                             <Modal
                                 title='Registro '
                                 visible={ modalVisible }
-                                onOk={ () => setModalVisible( false ) }
+                                onRegistrar={ () => setModalVisible( false ) }
                                 onCancel={ () => setModalVisible( false ) }
                                 width={ 900 }
                                 footer={ null }
+                                destroyOnClose
                             >
                                 <div className="formuRegistro">
-                                    <FormRegistro/>
+                                    <FormRegistro onRegister={handleCreateUser}/>
                                 </div>
 
                             </Modal>
@@ -52,7 +71,7 @@ const Raiz = () => {
                 </Col>
             </Row>
 
-        </div>
+        </>
     );
 };
 export default Raiz;

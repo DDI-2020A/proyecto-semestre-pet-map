@@ -1,22 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import '../styles/Galeria.less';
-import {Card,  Row, Col, Button, Radio, Input, Pagination  } from 'antd';
+import {Card,  Row, Col, Button, Radio, Input, Pagination, Modal } from 'antd';
 import { AudioOutlined } from '@ant-design/icons';
 
 
 const { Meta } = Card;
 const { Search } = Input;
 
-const suffix = (
-    <AudioOutlined
-        style={{
-            fontSize: 16,
-            color: '#1890ff',
-        }}
-    />
-);
+
 
 const Galeria = () => {
+
 
     const [base, setBase] = useState([]);
     const [Tipo, setTipo] = useState('');
@@ -50,12 +44,11 @@ const Galeria = () => {
     return (
         <>
             <div className="search"> <span>CAREGORIAS:  </span>
-                <Radio.Group name="radiogroup" defaultValue={2}>
+                <Radio.Group name="radiogroup" defaultValue={3}>
                     <Radio value={1}>Perros</Radio>
                     <Radio value={2}>Gatos</Radio>
                     <Radio value={3}>Todos</Radio>
                 </Radio.Group>
-                <Search placeholder="Dirección" onSearch={value => console.log(value)} enterButton />
 
             </div>
             <Row justify="space-around">
@@ -77,9 +70,12 @@ const Galeria = () => {
                                 >
                                     <Meta
                                         title={cat.type}
-                                        description={cat.id}
                                     />
-                                    <Button type="primaty" onClick={ () => handleVer (cat.type, cat.id, cat.image, cat.street) } >Ver </Button>
+                                    <button type="button" className="btn btn-primary" data-toggle="modal" onClick={ () => handleVer (cat.type, cat.id, cat.image, cat.street) }
+                                            data-target="#exampleModal">
+                                        Ver mas..
+                                    </button>
+
                                 </Card>
                             </Col>
                         ))
@@ -88,6 +84,38 @@ const Galeria = () => {
 
             </Row>
             <Pagination defaultCurrent={1} total={10} />
+
+
+            <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="exampleModalLabel">{Tipo}</h5>
+                        </div>
+                        <div className="modal-body row">
+                            <div className="col-6">
+                                <img src={Image} alt=""/>
+                            </div>
+                            <div className="col-6">
+                                <ul>
+                                    <li>Información: {ID} </li>
+                                    <br/>
+                                    <li>Direccion: {Street}</li>
+                                    <li>Barrio: </li>
+                                    <li>Calle: </li>
+                                    <li>Estado: </li>
+                                    <li>Descripcion</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="modal-footer">
+                            <button type="button" className="adopta btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" className=" adopta btn btn-primary">Adoptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
         </>
     );

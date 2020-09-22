@@ -9,14 +9,6 @@ const { Title } = Typography;
 
 const InicioSesion = () =>{
 
-    const layout = {
-        labelCol: { span: 8 },
-        wrapperCol: { span: 16 },
-    };
-    const tailLayout = {
-        wrapperCol: { offset: 8, span: 16 },
-    };
-
     const onFinish = values => {
         console.log('Success:', values);
     };
@@ -25,9 +17,8 @@ const InicioSesion = () =>{
         console.log('Failed:', errorInfo);
     };
 
-
     return(
-        <div>
+        <>
             <Row>
                 <Col span = {15}>
                     <div className='imgPp'>
@@ -38,7 +29,6 @@ const InicioSesion = () =>{
                     <div className='box'>
                         <Form
 
-                            {...layout}
                             name="basic"
                             initialValues={{ remember: true }}
                             onFinish={onFinish}
@@ -51,11 +41,11 @@ const InicioSesion = () =>{
                                 rules={[
                                     {
                                         type: 'email',
-                                        message: 'The input is not valid E-mail!',
+                                        message: 'El email ingresado no es válido',
                                     },
                                     {
                                         required: true,
-                                        message: 'Please input your E-mail!',
+                                        message: 'Ingrese un email válido',
                                     },
                                 ]}
                             >
@@ -65,17 +55,22 @@ const InicioSesion = () =>{
                             <Form.Item
                                 label="Contraseña"
                                 name="password"
-                                rules={[{ required: true, message: 'Please input your password!' }]}
+                                rules={[{ required: true, message: 'Ingrese una contraseña' }]}
                             >
                                 <Input.Password />
                             </Form.Item>
 
-                            <Form.Item {...tailLayout} name="remember" valuePropName="checked">
+                            <Form.Item  name="remember" valuePropName="checked">
                                 <Checkbox>Remember me</Checkbox>
                             </Form.Item>
 
+<<<<<<< HEAD
                             <Form.Item {...tailLayout}>
                                 <Button type="btn btn-access" htmlType="submit">
+=======
+                            <Form.Item >
+                                <Button type="primary" htmlType="submit">
+>>>>>>> bcdaf8caf7d1aad66163c4423f564735b9d1cccf
                                     Iniciar Sesión
                                 </Button>
                             </Form.Item>
@@ -90,12 +85,11 @@ const InicioSesion = () =>{
                     </div>
                 </Col>
             </Row>
-        </div>
-
-
+        </>
 
     );
 
 }
 
 export default InicioSesion;
+

@@ -1,69 +1,10 @@
 import React, { useState } from 'react';
-import {Form,Input,Tooltip,Cascader,Select,Row,Col,Checkbox,Button,AutoComplete,} from 'antd';
+import {Form,Input,message,Select,Checkbox,Button,AutoComplete,} from 'antd';
 
 const { Option } = Select;
-const AutoCompleteOption = AutoComplete.Option;
 
-const residences = [
-    {
-        value: 'zhejiang',
-        label: 'Zhejiang',
-        children: [
-            {
-                value: 'hangzhou',
-                label: 'Hangzhou',
-                children: [
-                    {
-                        value: 'xihu',
-                        label: 'West Lake',
-                    },
-                ],
-            },
-        ],
-    },
-    {
-        value: 'jiangsu',
-        label: 'Jiangsu',
-        children: [
-            {
-                value: 'nanjing',
-                label: 'Nanjing',
-                children: [
-                    {
-                        value: 'zhonghuamen',
-                        label: 'Zhong Hua Men',
-                    },
-                ],
-            },
-        ],
-    },
-];
+const FormRegistro = ({onRegister}) => {
 
-const formItemLayout = {
-    labelCol: {
-        xs: { span: 24 },
-        sm: { span: 8 },
-    },
-    wrapperCol: {
-        xs: { span: 24 },
-        sm: { span: 16 },
-    },
-};
-const tailFormItemLayout = {
-    wrapperCol: {
-        xs: {
-            span: 24,
-            offset: 0,
-        },
-        sm: {
-            span: 16,
-            offset: 8,
-        },
-    },
-};
-
-const FormRegistro = () => {
-    const [form] = Form.useForm();
 
     const onFinish = values => {
         console.log('Received values of form: ', values);
@@ -72,36 +13,16 @@ const FormRegistro = () => {
     const prefixSelector = (
         <Form.Item name="prefix" noStyle>
             <Select style={{ width: 70 }}>
-                <Option value="86">+593</Option>
+                <Option value="593">+593</Option>
             </Select>
         </Form.Item>
     );
 
-    const [autoCompleteResult, setAutoCompleteResult] = useState([]);
-
-    const onWebsiteChange = value => {
-        if (!value) {
-            setAutoCompleteResult([]);
-        } else {
-            setAutoCompleteResult(['.com', '.org', '.net'].map(domain => `${value}${domain}`));
-        }
-    };
-
-    const websiteOptions = autoCompleteResult.map(website => ({
-        label: website,
-        value: website,
-    }));
 
     return (
         <Form
-            {...formItemLayout}
-            form={form}
             name="register"
-            onFinish={onFinish}
-            initialValues={{
-                residence: ['zhejiang', 'hangzhou', 'xihu'],
-                prefix: '86',
-            }}
+            onFinish={onRegister}
             scrollToFirstError
         >
             <Form.Item
@@ -110,11 +31,11 @@ const FormRegistro = () => {
                 rules={[
                     {
                         type: 'email',
-                        message: 'The input is not valid E-mail!',
+                        message: 'Ingrese un correo válido',
                     },
                     {
                         required: true,
-                        message: 'Please input your E-mail!',
+                        message: 'Ingrese su e-mail',
                     },
                 ]}
             >
@@ -123,7 +44,7 @@ const FormRegistro = () => {
 
             <Form.Item
                 name="password"
-                label="Password"
+                label="Contraseña"
                 rules={[
                     {
                         required: true,
@@ -137,20 +58,20 @@ const FormRegistro = () => {
 
             <Form.Item
                 name="confirm"
-                label="Confirm Password"
+                label="Confirmar Contraseña"
                 dependencies={['password']}
                 hasFeedback
                 rules={[
                     {
                         required: true,
-                        message: 'Please confirm your password!',
+                        message: 'Confirme su contraseña',
                     },
                     ({ getFieldValue }) => ({
                         validator(rule, value) {
                             if (!value || getFieldValue('password') === value) {
                                 return Promise.resolve();
                             }
-                            return Promise.reject('The two passwords that you entered do not match!');
+                            return Promise.reject('Las contraseñas no coinciden');
                         },
                     }),
                 ]}
@@ -177,7 +98,7 @@ const FormRegistro = () => {
             <Form.Item
                 name="telefono"
                 label="Teléfono"
-                rules={[{ required: true, message: 'Por favor ingrese su telé fono!' }]}
+                rules={[{ required: true, message: 'Por favor ingrese su teléfono!' }]}
             >
                 <Input addonBefore={prefixSelector} style={{ width: '100%' }} />
             </Form.Item>
@@ -188,15 +109,15 @@ const FormRegistro = () => {
                 rules={[
                     { validator:(_, value) => value ? Promise.resolve() : Promise.reject('Should accept agreement') },
                 ]}
-                {...tailFormItemLayout}
+
             >
                 <Checkbox>
                     Aceptar <a href="">terminos y condiciones</a>
                 </Checkbox>
             </Form.Item>
-            <Form.Item {...tailFormItemLayout}>
-                <Button type="btn btn-access" shape="round" htmlType="submit">
-                    Register
+            <Form.Item>
+                <Button type="btn btn-access" shape="round" htmlType="submit" >
+                    Registrar
                 </Button>
             </Form.Item>
         </Form>
@@ -204,3 +125,4 @@ const FormRegistro = () => {
 };
 
 export default FormRegistro;
+
