@@ -64,13 +64,12 @@ const InicioSesion = () =>{
                                 <Checkbox>Remember me</Checkbox>
                             </Form.Item>
 
-<<<<<<< HEAD
-                            <Form.Item {...tailLayout}>
+                            <Form.Item >
                                 <Button type="btn btn-access" htmlType="submit">
-=======
+                                </Button>
+                            </Form.Item>
                             <Form.Item >
                                 <Button type="primary" htmlType="submit">
->>>>>>> bcdaf8caf7d1aad66163c4423f564735b9d1cccf
                                     Iniciar Sesión
                                 </Button>
                             </Form.Item>
@@ -86,10 +85,8 @@ const InicioSesion = () =>{
                 </Col>
             </Row>
         </>
-
     );
 
-}
+};
 
 export default InicioSesion;
-

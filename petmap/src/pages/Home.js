@@ -26,10 +26,7 @@ const Home = () => (
             </strong></span>
             </Col>
 
-            <Col ><span><strong>
-                <img className='catadoption' src={img2} alt="gatodonaciones"/>
-                </strong></span>
-            </Col>
+
 
         </Row>
 

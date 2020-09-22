@@ -1,9 +1,9 @@
 import React from "react";
-//import  { Typography} from "antd";
+import  { Typography} from "antd";
 //import Routes from "../constants/routes";
 import '../styles/derechos.less';
 
-//const {paragraph} =Typography;
+const {Title} =Typography;
 
 const derechos = () => {
     return (
@@ -15,9 +15,9 @@ const derechos = () => {
             </p>
             <p className='paragraph'>En sus puntos principales el reglamento establece:</p>
 
-            <h2  className='title2'>OBLIGACIONES</h2>
+            <Title  className='title2'>OBLIGACIONES</Title>
 
-            <p className='paragraph'>
+            <p>
                 <ul>
                     <li>Otorgar condiciones de vida adecuadas a las características del animal.</li>
                     <li>Educar, socializar e interactuar con el perro en la comunidad.</li>
@@ -28,9 +28,9 @@ const derechos = () => {
                     </ul>
                 </p>
 
-            <h2  className='title2'>PROHIBICIONES</h2>
+            <Title  className='title2'>PROHIBICIONES</Title>
 
-            <p className='paragraph'>
+            <p >
                 <ul>
                     <li>Maltratar, golpear o someter al animal.</li>
                     <li>Abandonar o mantener en estado de aislamiento.</li>
