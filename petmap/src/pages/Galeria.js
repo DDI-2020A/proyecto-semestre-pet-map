@@ -79,77 +79,77 @@ const Galeria = () => {
             </Header>
             <Content className='main-content mb-3'>
                 <div className="search"> <span>CAREGORIAS:  </span>
-                <Radio.Group name="radiogroup" defaultValue={3}>
-                    <Radio value={1}>Perros</Radio>
-                    <Radio value={2}>Gatos</Radio>
-                    <Radio value={3}>Todos</Radio>
-                </Radio.Group>
+                    <Radio.Group name="radiogroup" defaultValue={3}>
+                        <Radio value={1}>Perros</Radio>
+                        <Radio value={2}>Gatos</Radio>
+                        <Radio value={3}>Todos</Radio>
+                    </Radio.Group>
 
-            </div>
-            <Row justify="space-around">
-                {
-                    base
-                        ?base.map((pet, index) => (
-                            <Col  className="card" span={6}>
-                                <Card
-                                    key={index}
-                                    style={{width: 200}}
-                                    cover={
-                                        <img
-                                            className='img'
-                                            style={{width: 170, height:170}}
-                                            alt=""
-                                            src={pet.photo}
+                </div>
+                <Row justify="space-around">
+                    {
+                        base
+                            ?base.map((pet, index) => (
+                                <Col  className="card" span={6}>
+                                    <Card
+                                        key={index}
+                                        style={{width: 200}}
+                                        cover={
+                                            <img
+                                                className='img'
+                                                style={{width: 170, height:170}}
+                                                alt=""
+                                                src={pet.photo}
+                                            />
+                                        }
+                                    >
+                                        <Meta
+                                            title={pet.type}
                                         />
-                                    }
-                                >
-                                    <Meta
-                                        title={pet.type}
-                                    />
-                                    <button type="button" className="btn btn-primary" data-toggle="modal" onClick={ () => handleVer (pet.photo, pet.type, pet.street, pet.address,pet.state,pet.description) }
-                                            data-target="#exampleModal">
-                                        Ver mas..
-                                    </button>
+                                        <button type="button" className="btn btn-primary" data-toggle="modal" onClick={ () => handleVer (pet.photo, pet.type, pet.street, pet.address,pet.state,pet.description) }
+                                                data-target="#exampleModal">
+                                            Ver mas..
+                                        </button>
 
-                                </Card>
-                            </Col>
-                        ))
-                        : "Cargando...."
-                }
+                                    </Card>
+                                </Col>
+                            ))
+                            : "Cargando...."
+                    }
 
-            </Row>
-            <Pagination defaultCurrent={1} total={10} />
+                </Row>
+                <Pagination defaultCurrent={1} total={10} />
 
 
-            <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div className="modal-dialog">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">{tipo}</h5>
-                        </div>
-                        <div className="modal-body row">
-                            <div className="col-6">
-                                <img className="card-modal" src={image} alt=""/>
+                <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h5 className="modal-title" id="exampleModalLabel">{tipo}</h5>
                             </div>
-                            <div className="col-6">
-                                <ul>
-                                    <li>Información: </li>
-                                    <br/>
-                                    <li>Direccion: </li>
-                                    <li>Barrio: {barrio}</li>
-                                    <li>Calle: {calle}</li>
-                                    <li>Estado: {estado} </li>
-                                    <li>Descripcion: {descripcion} </li>
-                                </ul>
+                            <div className="modal-body row">
+                                <div className="col-6">
+                                    <img className="card-modal" src={image} alt=""/>
+                                </div>
+                                <div className="col-6">
+                                    <ul>
+                                        <li>Información: </li>
+                                        <br/>
+                                        <li>Direccion: </li>
+                                        <li>Barrio: {barrio}</li>
+                                        <li>Calle: {calle}</li>
+                                        <li>Estado: {estado} </li>
+                                        <li>Descripcion: {descripcion} </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" className="adopta btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <Link to={Routes.FIRSTADOPTION}><button type="button" className=" adopta btn btn-primary">Adoptar</button></Link>
+                            <div className="modal-footer">
+                                <button type="button" className="adopta btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                <Link to={Routes.FIRSTADOPTION}><button type="button" className=" adopta btn btn-primary">Adoptar</button></Link>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             </Content>
                 <Footer className= 'main-footer'>
                     <Row justify='space-around' align="middle" className="footer">

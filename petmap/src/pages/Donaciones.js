@@ -1,17 +1,16 @@
 import React from "react";
-import {Col, Layout, Row} from 'antd';
+import {Col, Layout, Row, Typography, Button} from 'antd';
 import "../styles/donaciones.less";
-import imgdog from "../images/perrodonaciones.svg";
-import imgcat from "../images/gatodonaciones.svg";
-import { Button } from 'antd';
-
 import Routes from "../constants/routes";
 import {Link} from 'react-router-dom';
 import Logo from "../images/logo.svg";
+import imgdog from "../images/perrodonaciones.svg";
+import imgcat from "../images/gatodonaciones.svg";
 import Navigation from "../components/Navigation";
 import {YoutubeOutlined} from "@ant-design/icons";
 
 const {Header, Footer, Content} = Layout;
+const {Title} =Typography;
 
 const Donaciones = () => {
 
@@ -25,32 +24,35 @@ const Donaciones = () => {
                       <Navigation />
                   </Header>
                   <Content className='main-content mb-3'>
-                  <div >
-                      <Row justify='space-around' align='middle' className='Contentd'>
-                      <Col><span><strong>
-                              <img  src={imgdog} alt="perrodonaciones" />
-                      </strong></span>
-                      </Col>
+                      <div>
+                          <Row justify='space-around' align='middle' className='Contentd'>
+                              <Col><span><strong>
+                <img src={imgdog} alt="perrodonaciones"/>
+            </strong></span>
+                              </Col>
 
-                      <Col ><span><strong>
-                           <h1>DONACIONES</h1>
-                          <div class="btn-group-vertical">
-                              <Link to={Routes.DONACIONESFISICAS}><Button  className='buttonoptiond'>Donaciones físicas</Button></Link>
-                              <Link to={Routes.DONACIONESTRANSFERENCIA}><Button  className='buttonoptiond'>Donaciones Transferencia bancaria</Button></Link>
-                              <Link to={Routes.DONACIONESDEBITO}><Button className='buttonoptiond' >Donaciones Débito Bancario</Button></Link>
-                          </div>
-                      </strong></span>
-                      </Col>
-                      <Col><span><strong>
-                          <img  src={imgcat} alt="gatodonaciones"/>
-                      </strong></span>
-                      </Col>
-                      <p className='paragraphfrase'>A veces sentimos que lo que hacemos es tan solo una gota en el mar, pero el mar seria menos si le faltara esa gota
-                          (Madre Teresa de Calcuta).</p>
-                  </Row>
+                              <Col><span><strong>
+                 <h1>DONACIONES</h1>
+                <div className="btn-group-vertical">
+                    <Link to={Routes.DONACIONESFISICAS}><Button
+                        className='buttonoptiond'>Donaciones físicas</Button></Link>
+                    <Link to={Routes.DONACIONESTRANSFERENCIA}><Button className='buttonoptiond'>Donaciones Transferencia bancaria</Button></Link>
+                    <Link to={Routes.DONACIONESDEBITO}><Button
+                        className='buttonoptiond'>Donaciones Débito Bancario</Button></Link>
+                </div>
+            </strong></span>
+                              </Col>
+                              <Col><span><strong>
+                <img src={imgcat} alt="gatodonaciones"/>
+            </strong></span>
+                              </Col>
+                              <p className='paragraphfrase'>A veces sentimos que lo que hacemos es tan solo una gota en
+                                  el mar, pero el mar seria menos si le faltara esa gota
+                                  (Madre Teresa de Calcuta).</p>
+                          </Row>
 
 
-          </div>
+                      </div>
                   </Content>
                   <Footer className= 'main-footer'>
                       <Row justify='space-around' align="middle" className="footer">
