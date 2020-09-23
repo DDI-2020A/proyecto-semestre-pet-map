@@ -15,8 +15,8 @@ const App = () => {
         <Router>
             <Layout className='layout'>
                 <Header className='main-header'>
-                    <div className='logo'>
-                        <Link to={Routes.RAIZ}><img src={ Logo } alt='PET MAP' /></Link>
+                    <div>
+                        <Link to={Routes.RAIZ}><img className="logo" src={ Logo } alt='PET MAP' /></Link>
                     </div>
                     <Navigation />
                 </Header>

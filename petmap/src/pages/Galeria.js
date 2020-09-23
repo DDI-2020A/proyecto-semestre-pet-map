@@ -3,6 +3,8 @@ import '../styles/Galeria.less';
 import {Card,  Row, Col, Button, Radio, Input, Pagination, Modal } from 'antd';
 import { AudioOutlined } from '@ant-design/icons';
 import FIREBASE from "../firebase";
+import {Link} from "react-router-dom";
+import Routes from "../constants/routes";
 
 const { Meta } = Card;
 const { Search } = Input;
@@ -132,7 +134,7 @@ const Galeria = () => {
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="adopta btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <button type="button" className=" adopta btn btn-primary">Adoptar</button>
+                            <Link to={Routes.FIRSTADOPTION}><button type="button" className=" adopta btn btn-primary">Adoptar</button></Link>
                         </div>
                     </div>
                 </div>

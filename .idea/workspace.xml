@@ -39,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PROYECTO/proyecto-semestre-pet-map" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -47,6 +47,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -92,6 +93,7 @@
       <workItem from="1600616315698" duration="1307000" />
       <workItem from="1600789545089" duration="1358000" />
       <workItem from="1600792386033" duration="1018000" />
+      <workItem from="1600819586820" duration="15424000" />
     </task>
     <servers />
   </component>
@@ -115,11 +117,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="352" y="142" key="EditFileWatcherDialog/0.0.1366.728@0.0.1366.728" timestamp="1600098531875" />
-    <state x="409" y="53" key="FileChooserDialogImpl" timestamp="1600792381468">
+    <state x="409" y="53" key="FileChooserDialogImpl" timestamp="1600827454517">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="327" y="42" key="FileChooserDialogImpl/0.0.1093.574@0.0.1093.574" timestamp="1598811411186" />
-    <state x="409" y="53" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1600792381468" />
+    <state x="409" y="53" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1600827454517" />
     <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1600051078947">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -136,5 +138,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600051078947" />
+    <state x="184" y="9" key="SettingsEditor" timestamp="1600820037771">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1600820037771" />
+    <state x="346" y="49" key="search.everywhere.popup" timestamp="1600830695616">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1600830695616" />
   </component>
 </project>

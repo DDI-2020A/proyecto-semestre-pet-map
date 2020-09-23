@@ -30,7 +30,7 @@ const RegisterPet = () => {
             ...values,
             foto: imageURL
         });
-        message.success('Los datos se an registrado correctamente');
+        message.success('Los datos se han registrado correctamente');
     }
 
 

@@ -11,8 +11,6 @@ const Mision = () => {
 
     return (
         <>
-
-            <div className="fo"></div>
             <div className="row con">
                 <div className="col-5">
                     <img src={dog}/>
