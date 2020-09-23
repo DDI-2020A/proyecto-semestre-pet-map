@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import {Menu} from "antd";
+import  {Menu,Button} from "antd";
 import {Link} from 'react-router-dom';
 import Routes from "../constants/routes";
 import {HomeOutlined,FormOutlined,NotificationOutlined,ApartmentOutlined,SmileOutlined,QuestionCircleOutlined} from '@ant-design/icons';
+import FIREBASE from "../firebase";
 const { SubMenu } = Menu;
 
 
@@ -33,9 +34,15 @@ const Navigation=()=>{
             <Menu.Item key='derechos' icon={<SmileOutlined />}><Link to={Routes.DERECHOS}></Link>
                 Derechos Animales
             </Menu.Item>
-            <Menu.Item key='mision' icon={<QuestionCircleOutlined />} > <Link to={Routes.MISION}>¿Quienes Somos?</Link></Menu.Item>
+            <Menu.Item key='mision' icon={<QuestionCircleOutlined />} > <Link to={Routes.MISION}>
+                ¿Quienes Somos?</Link>
+            </Menu.Item>
+            <Menu.Item key='logout' icon={<QuestionCircleOutlined />} >
+                <Button type='link' onClick={ () => FIREBASE.auth.signOut() }>Logout</Button>
+            </Menu.Item>
 
-    </Menu>
+
+        </Menu>
     );
 };
 

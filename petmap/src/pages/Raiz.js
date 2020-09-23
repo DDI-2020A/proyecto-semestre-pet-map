@@ -1,13 +1,17 @@
 import React, {useState} from 'react';
 import "../styles/Raiz.less";
-import {Modal, Button, Col, Row, Typography, message,} from "antd";
-import img1 from "../images/Captura1.svg";
+import {Modal, Button, Col, Row, Typography, message, Layout,Carousel} from "antd";
 import {Link} from "react-router-dom";
 import Routes from "../constants/routes";
 import FormRegistro from "../components/FormRegistro";
 import FIREBASE from "../firebase";
+import Logo from "../images/logo.svg";
+import Navigation from "../components/Navigation";
+import {YoutubeOutlined} from "@ant-design/icons";
+import imgP from "../images/logo.svg";
 
 const {Title} =Typography;
+const {Header, Footer, Content} = Layout;
 
 const Raiz = () => {
 
@@ -17,59 +21,104 @@ const Raiz = () => {
     const handleVisibleModal = () => {
         setModalVisible(true);
     };
-    const handleNoVisibleModal = () => {
-        setModalVisible(false);
-    };
+
     const handleCreateUser = async( values ) => {
-        console.log( 'form values', values );
-        await FIREBASE.db.ref( `users` ).push( {
+        try {
 
-            email: values.email.toLowerCase(),
-            password: values.password,
-            nombre: values.nombre.toUpperCase(),
-            apellido: values.apellido,
-            telefono: values.telefono,
+           const user = await FIREBASE.auth.createUserWithEmailAndPassword(values.email, values.password);
+           delete values.password;
 
-        } );
+           await FIREBASE.db.ref( `users/${user.uid}`) .push( values)
+
+           console.log('values', values);
+
+
         message.success( 'Los datos se guardaron correctamente :)' );
+    }catch (error){
+        message.error(error.message)
+        }
+    }
+
+    const contentStyle = {
+        height: '500px',
+        color: '#fff',
+        lineHeight: '160px',
+        textAlign: 'center',
+        background: '#364d79',
+
     };
     return(
         <>
-            <Row>
-                <Col span = {15}>
-                    <div className='imgPp'>
-                        <img src={img1} alt="PerroGato"/>
+            <Layout className="Layout">
+                <Header className='main-header'>
+                    <div className='logo'>
+                        <Link to={Routes.RAIZ}><img src={ Logo } alt='PET MAP' /></Link>
                     </div>
-                </Col>
-                <Col span = {9}>
-                    <div className='box'>
-                        <div className='boxCenter'>
-                            <Title className='title1'>PET  MAP</Title>
-                            <Title level = {2} className='title2 '>TU ACCIÓN PUEDE CAMBIAR VIDAS</Title>
-
-                            <Button type="btn btn-access" shape="round" onClick={handleVisibleModal}>REGISTRARSE</Button><br/><br/>
-                            <Modal
-                                title='Registro '
-                                visible={ modalVisible }
-                                onRegistrar={ () => setModalVisible( false ) }
-                                onCancel={ () => setModalVisible( false ) }
-                                width={ 900 }
-                                footer={ null }
-                                destroyOnClose
-                            >
-                                <div className="formuRegistro">
-                                    <FormRegistro onRegister={handleCreateUser}/>
+                    <div className="headerPet">
+                        <Title className='title1'>PET  MAP</Title>
+                    </div>
+                </Header>
+            <Content className='main-content mb-3'>
+                <Row>
+                    <Col span = {12}>
+                        <div className="carru">
+                            <div className="boxCarru">
+                            <Carousel className="minGalery" autoplay>
+                                <div>
+                                    <h3 style={contentStyle}><img src={imgP} alt="Logo"/></h3>
                                 </div>
-
-                            </Modal>
-
-                            <Button type="btn btn-access" shape="round" >
-                                <Link to={Routes.INICIOSESION} >INICIAR SESIÓN</Link>
-                            </Button>
+                                <div>
+                                    <h3 style={contentStyle}>2</h3>
+                                </div>
+                                <div>
+                                    <h3 style={contentStyle}>3</h3>
+                                </div>
+                                <div>
+                                    <h3 style={contentStyle}>4</h3>
+                                </div>
+                            </Carousel>
+                            </div>
                         </div>
-                    </div>
-                </Col>
-            </Row>
+                    </Col>
+                    <Col span = {12}>
+                        <div className='box'>
+                            <div className='boxCenter'>
+                                <Title className='title2'>PET  MAP</Title>
+                                <Title level = {2} className='title3 '>TU ACCIÓN PUEDE CAMBIAR VIDAS</Title>
+
+                                <Button type="btn btn-access" shape="round" onClick={handleVisibleModal}>REGISTRARSE</Button><br/><br/>
+                                <Modal
+                                    title='Registro '
+                                    visible={ modalVisible }
+                                    onRegistrar={ () => setModalVisible( false ) }
+                                    onCancel={ () => setModalVisible( false ) }
+                                    width={ 900 }
+                                    footer={ null }
+                                    destroyOnClose
+                                >
+                                    <div className="formuRegistro">
+                                        <FormRegistro onRegister={handleCreateUser}/>
+                                    </div>
+
+                                </Modal>
+
+                                <Button type="btn btn-access" shape="round" >
+                                    <Link to={Routes.INICIOSESION} >INICIAR SESIÓN</Link>
+                                </Button>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+            </Content>
+                <Footer className= 'main-footer'>
+                    <Row justify='space-around' align="middle" className="footer">
+                        <Col><span><strong>EPN</strong></span></Col>
+                        <Col><span><strong>©Pet Map - Derechos reservados 2020</strong></span></Col>
+                        <Col><span><strong><a href="https://www.youtube.com/channel/UC45-ro1DxP89Pzf5-oEtLFg" ><YoutubeOutlined className="youtube"
+                        /></a></strong></span></Col>
+                    </Row>
+                </Footer>
+            </Layout>
 
         </>
     );

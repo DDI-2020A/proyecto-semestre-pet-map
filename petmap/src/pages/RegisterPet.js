@@ -1,9 +1,14 @@
 import React, {useEffect} from 'react';
 import '../styles/RegisterPet.less'
 import adopta from '../images/adopta.png'
-import { Form, Input, Select, Upload, Button , message} from "antd";
-import { UploadOutlined, InboxOutlined } from '@ant-design/icons';
+import {Form, Input, Select, Upload, Button, message, Layout, Row, Col} from "antd";
+import {UploadOutlined, InboxOutlined, YoutubeOutlined} from '@ant-design/icons';
 import FIREBASE from "../firebase";
+import {Link} from "react-router-dom";
+import Routes from "../constants/routes";
+import Logo from "../images/logo.svg";
+import Navigation from "../components/Navigation";
+const {Header, Footer, Content} = Layout;
 
 
 const RegisterPet = () => {
@@ -36,6 +41,14 @@ const RegisterPet = () => {
 
     return(
         <>
+            <Layout className="Layout">
+                <Header className='main-header'>
+                    <div className='logo'>
+                        <Link to={Routes.RAIZ}><img src={ Logo } alt='PET MAP' /></Link>
+                    </div>
+                    <Navigation />
+                </Header>
+                <Content className='main-content mb-3'>
             <div className="main-reg">
                 <div className=" title-reg"><h3> AYUDA A UN NUEVO AMIGO A CONSEGUIR UN HOGAR </h3></div>
                 <div className="row">
@@ -137,6 +150,16 @@ const RegisterPet = () => {
                     </div>
                 </div>
             </div>
+                </Content>
+                <Footer className= 'main-footer'>
+                    <Row justify='space-around' align="middle" className="footer">
+                        <Col><span><strong>EPN</strong></span></Col>
+                        <Col><span><strong>©Pet Map - Derechos reservados 2020</strong></span></Col>
+                        <Col><span><strong><a href="https://www.youtube.com/channel/UC45-ro1DxP89Pzf5-oEtLFg" ><YoutubeOutlined className="youtube"
+                        /></a></strong></span></Col>
+                    </Row>
+                </Footer>
+            </Layout>
         </>
     )
 };

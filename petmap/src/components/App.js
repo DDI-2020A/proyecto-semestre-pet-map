@@ -1,38 +1,46 @@
- import React from 'react';
+ import React, {useEffect} from 'react';
 import '../styles/App.less';
-import {BrowserRouter as Router, Link} from 'react-router-dom';
-import {Layout, Row, Col, Button,Typography} from 'antd';
-import Logo from '../images/logo.svg';
-import Navigation from "./Navigation";
-import Routes from "../constants/routes";
 import AppRouter from "../routers/LinksPages";
-import {YoutubeOutlined} from '@ant-design/icons';
+import FIREBASE from "../firebase";
+import {useHistory} from "react-router";
+import Routes from "../constants/routes";
 
-const { Header, Footer, Content } = Layout;
+
 
 const App = () => {
+
+   // const history = useHistory();
+   // useEffect( () => {
+
+     //   FIREBASE.auth.onAuthStateChanged( function( user ) {
+       //     if( user ) {
+         //       // User is signed in.
+           //     let displayName = user.displayName;
+             //   let email = user.email;
+              //  let emailVerified = user.emailVerified;
+              //  let photoURL = user.photoURL;
+              //  let isAnonymous = user.isAnonymous;
+              //  let uid = user.uid;
+              //  let providerData = user.providerData;
+                // ...
+              //  console.log( 'user', user );
+              //  console.log( 'uid', uid );
+                // hacer la consulta a la bdd en el node (`users/${uid}`)
+              //  history.push( Routes.HOME );
+          //  } else {
+                // User is signed out.
+          //      console.log( 'user loggedOut' );
+           //     history.replace( Routes.RAIZ );
+           // }
+       // } );
+
+      /*  return () => {
+            console.log( 'UNSUBSCRIBE' );
+        };
+    } );*/
+
     return (
-        <Router>
-            <Layout className='layout'>
-                <Header className='main-header'>
-                    <div>
-                        <Link to={Routes.RAIZ}><img className="logo" src={ Logo } alt='PET MAP' /></Link>
-                    </div>
-                    <Navigation />
-                </Header>
-                <Content className='main-content mb-3'>
                     <AppRouter />
-                </Content>
-                <Footer className= 'main-footer'>
-                    <Row justify='space-around' align="middle" className="footer">
-                        <Col><span><strong>EPN</strong></span></Col>
-                        <Col><span><strong>©Pet Map - Derechos reservados 2020</strong></span></Col>
-                        <Col><span><strong><a href="https://www.youtube.com/channel/UC45-ro1DxP89Pzf5-oEtLFg" ><YoutubeOutlined className="youtube"
-                        /></a></strong></span></Col>
-                    </Row>
-                </Footer>
-            </Layout>
-        </Router>
     );
 };
 

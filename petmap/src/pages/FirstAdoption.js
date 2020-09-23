@@ -1,12 +1,17 @@
+
 import React, {useEffect} from 'react';
-import '../styles/FirstAdop.less'
+import "../styles/FirstAdop.less";
 import { Form, Input, Select, Upload, Button , message, Row, Col} from "antd";
-import { SmileOutlined  } from '@ant-design/icons';
-import {Link} from "react-router-dom";
+import {UserOutlined,SmileOutlined, EditOutlined, YoutubeOutlined} from '@ant-design/icons';
+import {Link} from 'react-router-dom';
+import ROUTES from '../constants/routes';
 import Routes from "../constants/routes";
+import Logo from "../images/logo.svg";
+import Navigation from "../components/Navigation";
 import no from "../images/Tom.svg";
 
 
+const {Content,Footer,Header} = Layout;
 const FirstAdoption = () => {
 
     //const handleSubmit   = async (values) =>{
@@ -14,8 +19,16 @@ const FirstAdoption = () => {
     //}
 
   return (
-    <>
-        <div className="main-adop">
+<>
+      <layout className='layout'>
+          <Header className='main-header'>
+              <div className='logo'>
+                  <Link to={Routes.RAIZ}><img src={ Logo } alt='PET MAP' /></Link>
+              </div>
+              <Navigation />
+          </Header>
+          <Content className='main-content mb-3'>
+          <div className="main-adop">
             <Row justify='space-around' align="middle">
                 <Col span={8}>
                     <p>¿Desea Adoptar?<SmileOutlined /></p>
@@ -38,6 +51,17 @@ const FirstAdoption = () => {
                 </Col>
             </Row>
         </div>
+        </Content>
+        <Footer className= 'main-footer'>
+              <Row justify='space-around' align="middle" className="footer">
+                  <Col><span><strong>EPN</strong></span></Col>
+                  <Col><span><strong>©Pet Map - Derechos reservados 2020</strong></span></Col>
+                  <Col><span><strong><a href="https://www.youtube.com/channel/UC45-ro1DxP89Pzf5-oEtLFg" ><YoutubeOutlined className="youtube"
+                  /></a></strong></span></Col>
+              </Row>
+        </Footer>
+      </layout>    
+        
     </>
 
   );

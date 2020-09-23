@@ -5,19 +5,14 @@ const { Option } = Select;
 
 const FormRegistro = ({onRegister}) => {
 
+    const [ modalNoVisible, setModalNoVisible ] = useState( true );
 
+    const handleNoVisibleModal = () => {
+        setModalNoVisible(false);
+    };
     const onFinish = values => {
         console.log('Received values of form: ', values);
     };
-
-    const prefixSelector = (
-        <Form.Item name="prefix" noStyle>
-            <Select style={{ width: 70 }}>
-                <Option value="593">+593</Option>
-            </Select>
-        </Form.Item>
-    );
-
 
     return (
         <Form
@@ -100,7 +95,7 @@ const FormRegistro = ({onRegister}) => {
                 label="Teléfono"
                 rules={[{ required: true, message: 'Por favor ingrese su teléfono!' }]}
             >
-                <Input addonBefore={prefixSelector} style={{ width: '100%' }} />
+                <Input maxLength={10}  style={{ width: '100%' }} />
             </Form.Item>
 
             <Form.Item
@@ -112,12 +107,12 @@ const FormRegistro = ({onRegister}) => {
 
             >
                 <Checkbox>
-                    Aceptar <a href="">terminos y condiciones</a>
+                    Aceptar terminos y condiciones
                 </Checkbox>
             </Form.Item>
             <Form.Item>
                 <Button type="btn btn-access" shape="round" htmlType="submit" >
-                    Registrar
+                   Registrar
                 </Button>
             </Form.Item>
         </Form>
