@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {Col, Row,Typography, Button} from "antd";
 import {PhoneOutlined} from '@ant-design/icons';
 import {Link} from "react-router-dom";
@@ -6,7 +7,6 @@ import Routes from "../constants/routes";
 import  "../styles/don_fisica.less";
 const { Title } = Typography;
 
-//const style = { background: 'none', padding: '8px 0' };
 
 const Donacionesfisicas = () => (
     <div>
@@ -67,8 +67,8 @@ const Donacionesfisicas = () => (
                         <li ><PhoneOutlined classmate='callphone'/>0978885465 Carlos Montesdeoca</li>
                     </ul></p>
                     <h3 className='subtitle'>Otras Donaciones</h3>
-                    <Link to={Routes.DONACIONESTRANSFERENCIA}><Button type="primary" className='buttonopt'>Donaciones Transferencia bancaria</Button></Link>
-                    <Link to={Routes.DONACIONESDEBITO}><Button type="primary" className='buttonopt' >Donaciones Débito Bancario</Button></Link>
+                    <Link to={Routes.DONACIONESTRANSFERENCIA}><Button type="primary" className='buttonoptdf'>Donaciones Transferencia bancaria</Button></Link>
+                    <Link to={Routes.DONACIONESDEBITO}><Button type="primary" className='buttonoptdf' >Donaciones Débito Bancario</Button></Link>
                 </div>
             </Col>
         </Row>

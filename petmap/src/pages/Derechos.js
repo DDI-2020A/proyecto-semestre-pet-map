@@ -8,8 +8,8 @@ const {Title} =Typography;
 const derechos = () => {
     return (
         <div className="main_donations">
-            <h1  className='title1'>DERECHO ANIMAL</h1>
-            <h2 className='seconttitle'>REGLAMENTO NACIONAL DE TENDENCIA DE PERROS</h2>
+            <Title  className='title1'>DERECHO ANIMAL</Title>
+            <Title className='seconttitle'>REGLAMENTO NACIONAL DE TENDENCIA DE PERROS</Title>
 
             <p className='paragraph'>En febrero de 2009, se elaboró el Acuerdo Interministerial para la Tenencia Responsable de Perros, el cual entró en vigencia en agosto del mismo año.
             </p>
@@ -17,7 +17,7 @@ const derechos = () => {
 
             <Title  className='title2'>OBLIGACIONES</Title>
 
-            <p>
+            <p className='paragraph'>
                 <ul>
                     <li>Otorgar condiciones de vida adecuadas a las características del animal.</li>
                     <li>Educar, socializar e interactuar con el perro en la comunidad.</li>
@@ -30,7 +30,7 @@ const derechos = () => {
 
             <Title  className='title2'>PROHIBICIONES</Title>
 
-            <p >
+            <p className='paragraph'>
                 <ul>
                     <li>Maltratar, golpear o someter al animal.</li>
                     <li>Abandonar o mantener en estado de aislamiento.</li>
