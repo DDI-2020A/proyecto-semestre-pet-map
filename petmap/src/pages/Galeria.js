@@ -7,6 +7,7 @@ import Navigation from "../components/Navigation";
 import Logo from '../images/logo.svg';
 import Routes from "../constants/routes";
 import {Layout} from 'antd';
+import FIREBASE from "../firebase";
 
 const { Meta } = Card;
 const { Search } = Input;
@@ -17,31 +18,53 @@ const Galeria = () => {
 
 
     const [base, setBase] = useState([]);
-    const [Tipo, setTipo] = useState('');
-    const [ID, setId] = useState('');
-    const [Street, setStreet] = useState('');
-    const [Image, setImage] = useState('');
+    const [tipo, setTipo] = useState('');
+    const [calle, setCalle] = useState('');
+    const [barrio, setBarrio] = useState('');
+    const [image, setImage] = useState('');
+    const [descripcion, setDescripcion] = useState('');
+    const [estado, setEstado] = useState('');
 
-    useEffect(() => {
-        const getPet = async () => {
-            const data = await fetch(`https://run.mocky.io/v3/2b0d9203-d2b9-4fe8-b362-294c68b12b89`);
-            const jsonPet = await data.json();
-            setBase(jsonPet);
-            console.log('Mascotas', jsonPet);
+    useEffect( () =>{
+        const getAnimal = async() =>  {
+            FIREBASE.db.ref('AdoptionPet').once('value')
+                .then((snapshot) =>{
+                    const petData = [];
+                    snapshot.forEach( ( data ) =>{
+                        console.log('animals', data.val());
+                        const pets = data.val();
+                        const petsId = data.key;
+                        petData.push({
+                            key: petsId,
+                            type: pets.tipo,
+                            photo: pets.foto,
+                            street: pets.calle,
+                            address: pets.barrio,
+                            state: pets.estado,
+                            description: pets.descripcion
+
+                        });
+                    });
+                    console.log('datos', petData )
+                    setBase( petData );
+                });
+
         };
-        getPet();
-    }, [Tipo]);
+        getAnimal();
+    },[]);
 
-    const handleVer = (tip, id, image, street) => {
+    const handleVer = (fotoPet, tipoPet, callePet, barrioPet, estadoPet, descripcionPet ) => {
+        setTipo( tipoPet );
+        setCalle( callePet );
+        setBarrio( barrioPet);
+        setImage( fotoPet );
+        setDescripcion( descripcionPet );
+        setEstado( estadoPet);
 
-        setId(id);
-        setImage(image);
-        setStreet(street);
-        setTipo(tip);
-        console.log('tipo', Tipo);
-        console.log('id', ID);
-        console.log('image', Image);
-        console.log('street', street);
+        console.log('tipo', tipo);
+        console.log('barrio', barrio );
+        console.log('calle', calle );
+        console.log('descripcion', descripcion);
 
     }
 
@@ -65,25 +88,25 @@ const Galeria = () => {
             </div>
             <Row justify="space-around">
                 {
-                    base.pet
-                        ?base.pet.map((cat, index) => (
-                            <Col span={6}>
+                    base
+                        ?base.map((pet, index) => (
+                            <Col  className="card" span={6}>
                                 <Card
                                     key={index}
                                     style={{width: 200}}
                                     cover={
                                         <img
                                             className='img'
-                                            style={{width: 200}}
+                                            style={{width: 170, height:170}}
                                             alt=""
-                                            src={cat.image}
+                                            src={pet.photo}
                                         />
                                     }
                                 >
                                     <Meta
-                                        title={cat.type}
+                                        title={pet.type}
                                     />
-                                    <button type="button" className="btn btn-primary" data-toggle="modal" onClick={ () => handleVer (cat.type, cat.id, cat.image, cat.street) }
+                                    <button type="button" className="btn btn-primary" data-toggle="modal" onClick={ () => handleVer (pet.photo, pet.type, pet.street, pet.address,pet.state,pet.description) }
                                             data-target="#exampleModal">
                                         Ver mas..
                                     </button>
@@ -102,27 +125,27 @@ const Galeria = () => {
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">{Tipo}</h5>
+                            <h5 className="modal-title" id="exampleModalLabel">{tipo}</h5>
                         </div>
                         <div className="modal-body row">
                             <div className="col-6">
-                                <img src={Image} alt=""/>
+                                <img className="card-modal" src={image} alt=""/>
                             </div>
                             <div className="col-6">
                                 <ul>
-                                    <li>Información: {ID} </li>
+                                    <li>Información: </li>
                                     <br/>
-                                    <li>Direccion: {Street}</li>
-                                    <li>Barrio: </li>
-                                    <li>Calle: </li>
-                                    <li>Estado: </li>
-                                    <li>Descripcion</li>
+                                    <li>Direccion: </li>
+                                    <li>Barrio: {barrio}</li>
+                                    <li>Calle: {calle}</li>
+                                    <li>Estado: {estado} </li>
+                                    <li>Descripcion: {descripcion} </li>
                                 </ul>
                             </div>
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="adopta btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <button type="button" className=" adopta btn btn-primary">Adoptar</button>
+                            <Link to={Routes.FIRSTADOPTION}><button type="button" className=" adopta btn btn-primary">Adoptar</button></Link>
                         </div>
                     </div>
                 </div>

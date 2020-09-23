@@ -45,8 +45,6 @@ const Home = () => {
 
                     </Row>
 
-
-
                 </div>
                 </Content>
                 <Footer className= 'main-footer'>

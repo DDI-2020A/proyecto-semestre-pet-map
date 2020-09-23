@@ -1,5 +1,5 @@
 import React from "react";
-//import  { Typography} from "antd";
+import  { Typography} from "antd";
 //import Routes from "../constants/routes";
 import '../styles/derechos.less';
 import {Col, Layout, Row} from "antd";
@@ -8,6 +8,7 @@ import {Link} from "react-router-dom";
 import Routes from "../constants/routes";
 import Logo from "../images/logo.svg";
 import Navigation from "../components/Navigation";
+const {Title} =Typography;
 
 //const {paragraph} =Typography;
 const {Header, Footer, Content} = Layout;
@@ -24,14 +25,14 @@ const derechos = () => {
                 </Header>
                 <Content className='main-content mb-3'>
                 <div className="main_donations">
-                    <h1  className='title1'>DERECHO ANIMAL</h1>
-                    <h2 className='seconttitle'>REGLAMENTO NACIONAL DE TENDENCIA DE PERROS</h2>
+                    <Title  className='title1'>DERECHO ANIMAL</Title>
+                    <Title className='seconttitle'>REGLAMENTO NACIONAL DE TENDENCIA DE PERROS</Title>
 
                     <p className='paragraph'>En febrero de 2009, se elaboró el Acuerdo Interministerial para la Tenencia Responsable de Perros, el cual entró en vigencia en agosto del mismo año.
                     </p>
                     <p className='paragraph'>En sus puntos principales el reglamento establece:</p>
 
-                    <h2  className='title2'>OBLIGACIONES</h2>
+                    <Title  className='title2'>OBLIGACIONES</Title>
 
                     <p className='paragraph'>
                         <ul>
@@ -44,7 +45,7 @@ const derechos = () => {
                             </ul>
                         </p>
 
-                    <h2  className='title2'>PROHIBICIONES</h2>
+                    <Title  className='title2'>PROHIBICIONES</Title>
 
                     <p className='paragraph'>
                         <ul>
@@ -68,6 +69,7 @@ const derechos = () => {
                 </Footer>
             </Layout>
         </>
+
     );
 };
 

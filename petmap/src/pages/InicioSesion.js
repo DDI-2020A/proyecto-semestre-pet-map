@@ -125,11 +125,9 @@ const InicioSesion = () =>{
                     </Row>
                 </Footer>
             </Layout>
-
         </>
     );
 
 };
 
 export default InicioSesion;
-

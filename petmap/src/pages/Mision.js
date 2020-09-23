@@ -17,6 +17,7 @@ const Mision = () => {
 
     return (
         <>
+
             <Layout className="Layout">
                 <Header className='main-header'>
                     <div className='logo'>
@@ -26,6 +27,7 @@ const Mision = () => {
                 </Header>
                 <Content className='main-content mb-3'>
             <div className="fo"></div>
+
             <div className="row con">
                 <div className="col-5">
                     <img src={dog}/>

@@ -22,14 +22,13 @@ const Navigation=()=>{
                 <Link to={Routes.HOME}>Home</Link>
             </Menu.Item>
             <Menu.Item key='registro' icon={<FormOutlined />}>
-                <Link to={Routes.FIRSTADOPTION}>Registro Adopción</Link>
+                <Link to={Routes.ADOPTA}>Adopción</Link>
             </Menu.Item>
             <Menu.Item key='noticias' icon={<NotificationOutlined />}>
                 Noticias
             </Menu.Item>
             <SubMenu icon={<ApartmentOutlined />} title='servicios'>
                 <Menu.Item key="donaciones"><Link to={Routes.DONACIONES}>Donaciones</Link></Menu.Item>
-                <Menu.Item key="adopcion"><Link to={Routes.ADOPTA}>Adopción</Link></Menu.Item>
                 <Menu.Item key="registroA"><Link to={Routes.REGISTROANIMAL}>Registro Animal</Link></Menu.Item>
             </SubMenu>
             <Menu.Item key='derechos' icon={<SmileOutlined />}><Link to={Routes.DERECHOS}></Link>
