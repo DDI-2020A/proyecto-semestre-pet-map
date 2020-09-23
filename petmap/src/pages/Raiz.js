@@ -8,8 +8,10 @@ import FIREBASE from "../firebase";
 import Logo from "../images/logo.svg";
 import Navigation from "../components/Navigation";
 import {YoutubeOutlined} from "@ant-design/icons";
-import imgP from "../images/logo.svg";
-
+import carrusel1 from "../images/Logo.PNG";
+import carrusel2 from "../images/carrusel2.jpg"
+import carrusel3 from "../images/carrusel3.jpg"
+import carrusel4 from "../images/carrusel4.jpg"
 const {Title} =Typography;
 const {Header, Footer, Content} = Layout;
 
@@ -44,7 +46,7 @@ const Raiz = () => {
         color: '#fff',
         lineHeight: '160px',
         textAlign: 'center',
-        background: '#364d79',
+
 
     };
     return(
@@ -65,16 +67,16 @@ const Raiz = () => {
                             <div className="boxCarru">
                             <Carousel className="minGalery" autoplay>
                                 <div>
-                                    <h3 style={contentStyle}><img src={imgP} alt="Logo"/></h3>
+                                    <h3 style={contentStyle}><img src={carrusel1} alt="Carrusel"/></h3>
                                 </div>
                                 <div>
-                                    <h3 style={contentStyle}>2</h3>
+                                    <h3 style={contentStyle}><img src={carrusel2} alt="Carrusel"/></h3>
                                 </div>
                                 <div>
-                                    <h3 style={contentStyle}>3</h3>
+                                    <h3 style={contentStyle}><img src={carrusel3} alt="Carrusel"/></h3>
                                 </div>
                                 <div>
-                                    <h3 style={contentStyle}>4</h3>
+                                    <h3 style={contentStyle}><img src={carrusel4} alt="Carrusel"/></h3>
                                 </div>
                             </Carousel>
                             </div>
