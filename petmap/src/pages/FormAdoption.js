@@ -2,9 +2,12 @@ import React from 'react';
 import "../styles/forms.less";
 import {Input, Button, Col, Layout, Row, Checkbox, Form} from "antd";
 import {Link} from 'react-router-dom';
-import {EditOutlined,DingtalkOutlined} from '@ant-design/icons';
+import {EditOutlined, DingtalkOutlined, YoutubeOutlined} from '@ant-design/icons';
+import Routes from "../constants/routes";
+import Logo from "../images/logo.svg";
+import Navigation from "../components/Navigation";
 
-const {Content,Footer} = Layout;
+const {Content,Footer,Header} = Layout;
 
 const forms = () => {
     function onChange(e) {
@@ -12,6 +15,12 @@ const forms = () => {
     }
     return (
         <layout className='layout'>
+            <Header className='main-header'>
+                <div className='logo'>
+                    <Link to={Routes.RAIZ}><img src={ Logo } alt='PET MAP' /></Link>
+                </div>
+                <Navigation />
+            </Header>
             <Content className='main-content mb-3'>
                 <Row>
                     <Col span={24}>
@@ -59,6 +68,14 @@ const forms = () => {
                 </Row>
 
             </Content>
+            <Footer className= 'main-footer'>
+                <Row justify='space-around' align="middle" className="footer">
+                    <Col><span><strong>EPN</strong></span></Col>
+                    <Col><span><strong>©Pet Map - Derechos reservados 2020</strong></span></Col>
+                    <Col><span><strong><a href="https://www.youtube.com/channel/UC45-ro1DxP89Pzf5-oEtLFg" ><YoutubeOutlined className="youtube"
+                    /></a></strong></span></Col>
+                </Row>
+            </Footer>
         </layout>
 
     );

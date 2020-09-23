@@ -1,12 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import '../styles/Galeria.less';
 import {Card,  Row, Col, Button, Radio, Input, Pagination, Modal } from 'antd';
-import { AudioOutlined } from '@ant-design/icons';
-
+import {AudioOutlined, YoutubeOutlined} from '@ant-design/icons';
+import {Link} from "react-router-dom";
+import Navigation from "../components/Navigation";
+import Logo from '../images/logo.svg';
+import Routes from "../constants/routes";
+import {Layout} from 'antd';
 
 const { Meta } = Card;
 const { Search } = Input;
-
+const { Header, Footer, Content } = Layout;
 
 
 const Galeria = () => {
@@ -43,7 +47,15 @@ const Galeria = () => {
 
     return (
         <>
-            <div className="search"> <span>CAREGORIAS:  </span>
+            <Layout className="Layout">
+            <Header className='main-header'>
+                <div className='logo'>
+                    <Link to={Routes.RAIZ}><img src={ Logo } alt='PET MAP' /></Link>
+                </div>
+                <Navigation />
+            </Header>
+            <Content className='main-content mb-3'>
+                <div className="search"> <span>CAREGORIAS:  </span>
                 <Radio.Group name="radiogroup" defaultValue={3}>
                     <Radio value={1}>Perros</Radio>
                     <Radio value={2}>Gatos</Radio>
@@ -115,6 +127,16 @@ const Galeria = () => {
                     </div>
                 </div>
             </div>
+            </Content>
+                <Footer className= 'main-footer'>
+                    <Row justify='space-around' align="middle" className="footer">
+                        <Col><span><strong>EPN</strong></span></Col>
+                        <Col><span><strong>©Pet Map - Derechos reservados 2020</strong></span></Col>
+                        <Col><span><strong><a href="https://www.youtube.com/channel/UC45-ro1DxP89Pzf5-oEtLFg" ><YoutubeOutlined className="youtube"
+                        /></a></strong></span></Col>
+                    </Row>
+                </Footer>
+            </Layout>
 
 
         </>

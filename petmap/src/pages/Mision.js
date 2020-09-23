@@ -5,13 +5,26 @@ import d1 from "../images/Carlos.jpg";
 import d2 from "../images/Yoma.jpg";
 import d3 from "../images/Guillo.jpg";
 import d4 from "../images/Elvis.jpg";
-
+import {Link} from "react-router-dom";
+import Routes from "../constants/routes";
+import Logo from "../images/logo.svg";
+import Navigation from "../components/Navigation";
+import {Col, Layout, Row} from "antd";
+import {YoutubeOutlined} from "@ant-design/icons";
+const {Header, Footer, Content} = Layout;
 
 const Mision = () => {
 
     return (
         <>
-
+            <Layout className="Layout">
+                <Header className='main-header'>
+                    <div className='logo'>
+                        <Link to={Routes.RAIZ}><img src={ Logo } alt='PET MAP' /></Link>
+                    </div>
+                    <Navigation />
+                </Header>
+                <Content className='main-content mb-3'>
             <div className="fo"></div>
             <div className="row con">
                 <div className="col-5">
@@ -64,6 +77,16 @@ const Mision = () => {
                     </div>
                 </div>
             </div>
+                </Content>
+                <Footer className= 'main-footer'>
+                    <Row justify='space-around' align="middle" className="footer">
+                        <Col><span><strong>EPN</strong></span></Col>
+                        <Col><span><strong>©Pet Map - Derechos reservados 2020</strong></span></Col>
+                        <Col><span><strong><a href="https://www.youtube.com/channel/UC45-ro1DxP89Pzf5-oEtLFg" ><YoutubeOutlined className="youtube"
+                        /></a></strong></span></Col>
+                    </Row>
+                </Footer>
+            </Layout>
         </>
     );
 }
