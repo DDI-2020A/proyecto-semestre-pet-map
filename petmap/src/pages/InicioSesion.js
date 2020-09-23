@@ -47,7 +47,9 @@ const InicioSesion = () =>{
                     <div className='logo'>
                         <Link to={Routes.RAIZ}><img src={ Logo } alt='PET MAP' /></Link>
                     </div>
-                    <Navigation />
+                    <div className="headerPet">
+                        <Title className='title1'>PET  MAP</Title>
+                    </div>
                 </Header>
                 <Content className='main-content mb-3'>
                 <Row>
