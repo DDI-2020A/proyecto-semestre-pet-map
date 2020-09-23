@@ -88,7 +88,7 @@ const Raiz = () => {
                                 <Title className='title2'>PET  MAP</Title>
                                 <Title level = {2} className='title3 '>TU ACCIÓN PUEDE CAMBIAR VIDAS</Title>
 
-                                <Button type="btn btn-access" shape="round" onClick={handleVisibleModal}>REGISTRARSE</Button><br/><br/>
+                                <Button type="btn btn-access" className="ini" shape="round" onClick={handleVisibleModal}>REGISTRARSE</Button><br/><br/>
                                 <Modal
                                     title='Registro '
                                     visible={ modalVisible }
@@ -104,7 +104,7 @@ const Raiz = () => {
 
                                 </Modal>
 
-                                <Button type="btn btn-access" shape="round" >
+                                <Button type="btn btn-access" className="ini" shape="round" >
                                     <Link to={Routes.INICIOSESION} >INICIAR SESIÓN</Link>
                                 </Button>
                             </div>

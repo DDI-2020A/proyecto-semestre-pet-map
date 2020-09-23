@@ -1,5 +1,4 @@
 import React from "react";
-
 import "../styles/InicioSesion.less";
 import {Col, Row, Form, Input, Button, Checkbox, Typography, Layout, message} from "antd";
 import imgP from "../images/logo.svg";
@@ -94,13 +93,8 @@ const InicioSesion = () =>{
                                 <Form.Item  name="remember" valuePropName="checked">
                                     <Checkbox>Remember me</Checkbox>
                                 </Form.Item>
-
                                 <Form.Item >
-                                    <Button type="btn btn-access" htmlType="submit">
-                                    </Button>
-                                </Form.Item>
-                                <Form.Item >
-                                    <Button type="primary" htmlType="submit">
+                                    <Button type="btn btn-access" className="sesion" htmlType="submit">
                                         Iniciar Sesión
                                     </Button>
                                 </Form.Item>

@@ -78,14 +78,7 @@ const Galeria = () => {
                 <Navigation />
             </Header>
             <Content className='main-content mb-3'>
-                <div className="search"> <span>CAREGORIAS:  </span>
-                    <Radio.Group name="radiogroup" defaultValue={3}>
-                        <Radio value={1}>Perros</Radio>
-                        <Radio value={2}>Gatos</Radio>
-                        <Radio value={3}>Todos</Radio>
-                    </Radio.Group>
-
-                </div>
+                <div className="Gal"> <span>GALERÍA DE ANIMALITOS REGISTRADOS</span></div>
                 <Row justify="space-around">
                     {
                         base

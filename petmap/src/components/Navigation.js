@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import  {Menu,Button} from "antd";
 import {Link} from 'react-router-dom';
 import Routes from "../constants/routes";
-import {HomeOutlined,FormOutlined,NotificationOutlined,ApartmentOutlined,SmileOutlined,QuestionCircleOutlined} from '@ant-design/icons';
+import {HomeOutlined,ImportOutlined,FormOutlined,NotificationOutlined,ApartmentOutlined,SmileOutlined,QuestionCircleOutlined} from '@ant-design/icons';
 import FIREBASE from "../firebase";
 const { SubMenu } = Menu;
 
@@ -37,7 +37,7 @@ const Navigation=()=>{
             <Menu.Item key='mision' icon={<QuestionCircleOutlined />} > <Link to={Routes.MISION}>
                 ¿Quienes Somos?</Link>
             </Menu.Item>
-            <Menu.Item key='logout' icon={<QuestionCircleOutlined />} >
+            <Menu.Item key='logout' icon={<ImportOutlined />} >
                 <Button type='link' onClick={ () => FIREBASE.auth.signOut() }>Logout</Button>
             </Menu.Item>
 

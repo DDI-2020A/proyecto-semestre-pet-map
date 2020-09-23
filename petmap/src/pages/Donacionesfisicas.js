@@ -81,8 +81,8 @@ const Donacionesfisicas = () => {
                                             <li ><PhoneOutlined classmate='callphone'/>0978885465 Carlos Montesdeoca</li>
                                         </ul></p>
                                     <h3 className='subtitle'>Otras Donaciones</h3>
-                                    <Link to={Routes.DONACIONESTRANSFERENCIA}><Button type="primary" className='buttonoptdf'>Donaciones Transferencia bancaria</Button></Link>
-                                    <Link to={Routes.DONACIONESDEBITO}><Button type="primary" className='buttonoptdf' >Donaciones Débito Bancario</Button></Link>
+                                    <Link to={Routes.DONACIONESTRANSFERENCIA}><Button type="btn btn-access" className='buttonoptdf'>Donaciones Transferencia bancaria</Button></Link>
+                                    <Link to={Routes.DONACIONESDEBITO}><Button type="btn btn-access" className='buttonoptdf' >Donaciones Débito Bancario</Button></Link>
                                 </div>
                             </Col>
                         </Row>

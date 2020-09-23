@@ -49,8 +49,8 @@ const Donacionestransferencia = () => {
                                 <div >
 
                                     <h4 className='secondtitle'>Otro tipo de donaciones</h4>
-                                    <Link to={Routes.DONACIONESFISICAS}><Button type="primary" className='buttonopt'>Donaciones Físicas</Button></Link>
-                                    <Link to={Routes.DONACIONESDEBITO}><Button type="primary" className='buttonopt' >Donaciones Débito Bancario</Button></Link>
+                                    <Link to={Routes.DONACIONESFISICAS}><Button type="btn btn-access" className='buttonopt'>Donaciones Físicas</Button></Link>
+                                    <Link to={Routes.DONACIONESDEBITO}><Button type="btn btn-access" className='buttonopt' >Donaciones Débito Bancario</Button></Link>
 
                                 </div>
                             </Col>

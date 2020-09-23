@@ -71,10 +71,10 @@ const Donacionesdebito = () => {
                                             <div className="modal-body">
                                                 <h4>OBJETIVO: donar </h4>
                                                 <h1>$20</h1>
-                                                <button type="primary" className='buttonoptdd'><a
+                                                <button type="btn btn-access" className='buttonoptdd'><a
                                                     href="https://www.paypal.com/ec/signin" className='bank'>PAY PAL</a>
                                                 </button>
-                                                <button type="primary" className='buttonoptdd'>Donar con una tarjeta
+                                                <button type="btn btn-access" className='buttonoptdd'>Donar con una tarjeta
                                                 </button>
                                             </div>
 
@@ -94,10 +94,10 @@ const Donacionesdebito = () => {
                                             <div className="modal-body">
                                                 <h4>OBJETIVO: donar </h4>
                                                 <h1>$40</h1>
-                                                <button type="primary" className='buttonoptdd'><a
+                                                <button type="btn btn-access" className='buttonoptdd'><a
                                                     href="https://www.paypal.com/ec/signin" className='bank'>PAY PAL</a>
                                                 </button>
-                                                <button type="primary" className='buttonoptdd'>Donar con una tarjeta
+                                                <button type="btn btn-access" className='buttonoptdd'>Donar con una tarjeta
                                                 </button>
                                             </div>
 

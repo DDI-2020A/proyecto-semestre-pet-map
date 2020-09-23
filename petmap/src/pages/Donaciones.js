@@ -27,25 +27,19 @@ const Donaciones = () => {
                       <div>
                           <Row justify='space-around' align='middle' className='Contentd'>
                               <Col><span><strong>
-                <img src={imgdog} alt="perrodonaciones"/>
-            </strong></span>
-                              </Col>
+                                <img src={imgdog} className="adog" alt="perrodonaciones"/>
+                              </strong></span></Col>
 
                               <Col><span><strong>
-                 <h1>DONACIONES</h1>
-                <div className="btn-group-vertical">
-                    <Link to={Routes.DONACIONESFISICAS}><Button
-                        className='buttonoptiond'>Donaciones físicas</Button></Link>
-                    <Link to={Routes.DONACIONESTRANSFERENCIA}><Button className='buttonoptiond'>Donaciones Transferencia bancaria</Button></Link>
-                    <Link to={Routes.DONACIONESDEBITO}><Button
-                        className='buttonoptiond'>Donaciones Débito Bancario</Button></Link>
-                </div>
-            </strong></span>
-                              </Col>
-                              <Col><span><strong>
-                <img src={imgcat} alt="gatodonaciones"/>
-            </strong></span>
-                              </Col>
+                                    <h1>DONACIONES</h1>
+                                    <div className="btn-group-vertical">
+                                        <Link to={Routes.DONACIONESFISICAS}><Button type="btn btn-access"
+                                            className='buttonoptiond'>Donaciones físicas</Button></Link>
+                                        <Link to={Routes.DONACIONESTRANSFERENCIA}><Button type="btn btn-access" className='buttonoptiond'>Donaciones Transferencia bancaria</Button></Link>
+                                        <Link to={Routes.DONACIONESDEBITO}><Button type="btn btn-access"
+                                            className='buttonoptiond'>Donaciones Débito Bancario</Button></Link>
+                                    </div>
+                              </strong></span></Col>
                               <p className='paragraphfrase'>A veces sentimos que lo que hacemos es tan solo una gota en
                                   el mar, pero el mar seria menos si le faltara esa gota
                                   (Madre Teresa de Calcuta).</p>

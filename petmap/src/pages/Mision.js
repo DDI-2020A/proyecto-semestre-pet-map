@@ -31,50 +31,36 @@ const Mision = () => {
                             <img src={dog}/>
                         </div>
                         <div className="col-6">
-                            <h1>MISION</h1>
-                            <p>PETMAP es una idea que nacio gracias a el amor por los animales de un grupo de estudiantes de la Escuela Politecnica Nacional.</p>
-                            <p>Promovemos la protecciòn y adopcion de animales mediante la aplicacion de PET MAP y la conciencia de la comudad en el respeto que merecen y se debe tener hacia las demas especies.</p>
-                            <p>Cada animalito que se encuentre sin un hogar que le brinde cariño, comida y un techo donde vivir deberia encontrar un hogar. </p>
+                            <h1>MISIÓN</h1>
+                            <p>PETMAP es una idea que nació gracias al amor por los animales de un grupo de estudiantes de la Escuela Politécnica Nacional.</p>
+                            <p>Promovemos la protección y adopción de animales mediante la aplicación "PET MAP" y la conciencia de la comunidad sobre el respeto que merecen y se debe tener hacia las demás especies.</p>
+                            <p>Cada animalito que se encuentre sin un hogar, brindarle cariño, comida y un techo donde vivir, es nuetr misión. </p>
                             <br/>
-                            <h1>VISION</h1>
-                            <p>Ser una organizaciòn autosusteble, reconocida como referencia nacional en el bienestar animal, responsable del cambio en la relacion humana -animal en el Ecuador, Coordinaciones en la ciudad de Quito y sus alrededores.</p>
+                            <h1>VISIÓN</h1>
+                            <p>Ser una organización autosustentable, reconocida como referencia nacional en el bienestar y protección animal, responsable del cambio en la relacion humana - animal en el Ecuador, Coordinaciones en la ciudad de Quito y sus alrededores.</p>
                         </div>
-                        <div className="col-12">
-                            <h1>DESARROLLADORES</h1>
-                            <div className="row">
-                                <div className="col-6 card">
-                                    <img src={d1} className="desarrolladores" alt="..."/>
-                                    <div className="card-body">
-                                        <h3 className="card-title">Carlos Montesdeoca</h3>
-                                        <p className="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                                <div className="col-6 card">
-                                    <img src={d2} className="desarrolladores" alt="..."/>
-                                    <div className="card-body">
-                                        <h3 className="card-title">Yomara Diaz</h3>
-                                        <p className="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                                <div className="col-6 card">
-                                    <img src={d3} className="desarrolladores" alt="..."/>
-                                    <div className="card-body">
-                                        <h3 className="card-title">Guillermo Rivera</h3>
-                                        <p className="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                                <div className="col-6 card">
-                                    <img src={d4} className="desarrolladores" alt="..."/>
-                                    <div className="card-body">
-                                        <h3 className="card-title">Elvis Agila</h3>
-                                        <p className="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div className="Desarrolladores" >
+                            <h1 className="main_title">DESARROLLADORES</h1>
+                            <Row justify='space-around' align="middle">
+                                <Col span={8}>
+                                    <img src={d1} alt={'Carlos'}/>
+                                    <h3>Carlos Montesdeoca</h3>
+                                </Col>
+                                <Col span={8}>
+                                    <img src={d2} alt={'Yoma'}/>
+                                    <h3>Yomara Díaz</h3>
+                                </Col>
+                            </Row>
+                            <Row justify='space-around' align="middle">
+                                <Col span={8}>
+                                    <img src={d3} alt={'Guillo'}/>
+                                    <h3>Guillermo Rivera</h3>
+                                </Col>
+                                <Col span={8}>
+                                    <img src={d4} alt={'Elvis'}/>
+                                    <h3>Elvis Agila</h3>
+                                </Col>
+                            </Row>
                         </div>
                     </div>
                 </Content>
