@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
 import "../styles/Raiz.less";
-import {Modal, Button, Col, Row, Typography, message, Layout,Carousel} from "antd";
+import {Modal, Button, Col, Row, Typography, message, Layout, Carousel, Form, Input, Checkbox} from "antd";
 import {Link} from "react-router-dom";
 import Routes from "../constants/routes";
-import FormRegistro from "../components/FormRegistro";
 import FIREBASE from "../firebase";
 import Logo from "../images/logo.svg";
-import Navigation from "../components/Navigation";
 import {YoutubeOutlined} from "@ant-design/icons";
 import carrusel1 from "../images/Logo.PNG";
 import carrusel2 from "../images/carrusel2.jpg"
@@ -23,16 +21,24 @@ const Raiz = () => {
     const handleVisibleModal = () => {
         setModalVisible(true);
     };
+    const handleNoVisibleModal = () => {
+        setModalVisible(false);
+    };
 
     const handleCreateUser = async( values ) => {
         try {
 
            const user = await FIREBASE.auth.createUserWithEmailAndPassword(values.email, values.password);
            delete values.password;
+           delete values.confirm;
+            if( user ) {
 
-           await FIREBASE.db.ref( `users/${user.uid}`) .push( values)
 
-           console.log('values', values);
+                await FIREBASE.db.ref( `users/`) .push( values)
+
+                console.log( 'user', user );
+                //console.log( 'uid', uid );
+            }
 
 
         message.success( 'Los datos se guardaron correctamente :)' );
@@ -52,7 +58,9 @@ const Raiz = () => {
     return(
         <>
             <Layout className="Layout">
-                <Header className='main-header'>
+
+            <Content className='main-content mb-3'>
+                <Row> <Header className='main-header'>
                     <div className='logo'>
                         <Link to={Routes.RAIZ}><img src={ Logo } alt='PET MAP' /></Link>
                     </div>
@@ -60,8 +68,6 @@ const Raiz = () => {
                         <Title className='title1'>PET  MAP</Title>
                     </div>
                 </Header>
-            <Content className='main-content mb-3'>
-                <Row>
                     <Col span = {12}>
                         <div className="carru">
                             <div className="boxCarru">
@@ -99,7 +105,107 @@ const Raiz = () => {
                                     destroyOnClose
                                 >
                                     <div className="formuRegistro">
-                                        <FormRegistro onRegister={handleCreateUser}/>
+                                        <Form
+                                            name="register"
+                                            onFinish={handleCreateUser}
+                                            scrollToFirstError
+                                        >
+                                            <Form.Item
+                                                name="email"
+                                                label="E-mail"
+                                                rules={[
+                                                    {
+                                                        type: 'email',
+                                                        message: 'Ingrese un correo válido',
+                                                    },
+                                                    {
+                                                        required: true,
+                                                        message: 'Ingrese su e-mail',
+                                                    },
+                                                ]}
+                                            >
+                                                <Input />
+                                            </Form.Item>
+
+                                            <Form.Item
+                                                name="password"
+                                                label="Contraseña"
+                                                rules={[
+                                                    {
+                                                        required: true,
+                                                        message: 'Please input your password!',
+                                                    },
+                                                ]}
+                                                hasFeedback
+                                            >
+                                                <Input.Password />
+                                            </Form.Item>
+
+                                            <Form.Item
+                                                name="confirm"
+                                                label="Confirmar Contraseña"
+                                                dependencies={['password']}
+                                                hasFeedback
+                                                rules={[
+                                                    {
+                                                        required: true,
+                                                        message: 'Confirme su contraseña',
+                                                    },
+                                                    ({ getFieldValue }) => ({
+                                                        validator(rule, value) {
+                                                            if (!value || getFieldValue('password') === value) {
+                                                                return Promise.resolve();
+                                                            }
+                                                            return Promise.reject('Las contraseñas no coinciden');
+                                                        },
+                                                    }),
+                                                ]}
+                                            >
+                                                <Input.Password />
+                                            </Form.Item>
+
+                                            <Form.Item
+                                                name="nombre"
+                                                label="Nombre"
+
+                                                rules={[{ required: true, message: 'Por favor ingrese su nombre!', whitespace: true }]}
+                                            >
+                                                <Input />
+                                            </Form.Item>
+                                            <Form.Item
+                                                name="apellido"
+                                                label="Apellido"
+                                                rules={[{ required: true, message: 'Por favor ingrese su apellido!', whitespace: true }]}
+                                            >
+                                                <Input />
+                                            </Form.Item>
+
+                                            <Form.Item
+                                                name="telefono"
+                                                label="Teléfono"
+                                                rules={[{ required: true, message: 'Por favor ingrese su teléfono!' }]}
+                                            >
+                                                <Input maxLength={10}  style={{ width: '100%' }} />
+                                            </Form.Item>
+
+                                            <Form.Item
+                                                name="agreement"
+                                                valuePropName="checked"
+                                                rules={[
+                                                    { validator:(_, value) => value ? Promise.resolve() : Promise.reject('Should accept agreement') },
+                                                ]}
+
+                                            >
+                                                <Checkbox>
+                                                    Aceptar terminos y condiciones
+                                                </Checkbox>
+                                            </Form.Item>
+                                            <Form.Item>
+                                                <Button type="btn btn-access" shape="round" htmlType="submit" onClick={handleNoVisibleModal} >
+                                                    Registrar
+                                                </Button>
+                                            </Form.Item>
+                                        </Form>
                                     </div>
 
                                 </Modal>
@@ -121,6 +227,8 @@ const Raiz = () => {
                     </Row>
                 </Footer>
             </Layout>
+
+
 
         </>
     );
