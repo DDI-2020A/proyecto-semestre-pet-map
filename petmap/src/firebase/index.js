@@ -22,13 +22,14 @@ app.initializeApp( config );
 // export default app;
 const auth = app.auth();
 const db = app.database();
-//const storage = app.storage();
+const storage = app.storage();
 // export const functions = app.functions();
 
 
 const FIREBASE = {
     db,
-    auth
+    auth,
+    storage
 }
 
 export default FIREBASE;
