@@ -7,9 +7,10 @@ import FIREBASE from "../firebase";
 import Logo from "../images/logo.svg";
 import {YoutubeOutlined} from "@ant-design/icons";
 import carrusel1 from "../images/Logo.PNG";
-import carrusel2 from "../images/carrusel2.jpg"
-import carrusel3 from "../images/carrusel3.jpg"
-import carrusel4 from "../images/carrusel4.jpg"
+import carrusel2 from "../images/carrusel2.jpg";
+import carrusel3 from "../images/carrusel3.jpg";
+import carrusel4 from "../images/carrusel4.jpg";
+import animado from "../images/perroAnimado.gif";
 const {Title} =Typography;
 const {Header, Footer, Content} = Layout;
 
@@ -91,8 +92,9 @@ const Raiz = () => {
                     <Col span = {12}>
                         <div className='box'>
                             <div className='boxCenter'>
-                                <Title className='title2'>PET  MAP</Title>
-                                <Title level = {2} className='title3 '>TU ACCIÓN PUEDE CAMBIAR VIDAS</Title>
+
+
+                                <Title level = {2} className='title3 '>TU ACCIÓN <br/> PUEDE CAMBIAR VIDAS</Title>
 
                                 <Button type="btn btn-access" className="ini" shape="round" onClick={handleVisibleModal}>REGISTRARSE</Button><br/><br/>
                                 <Modal
