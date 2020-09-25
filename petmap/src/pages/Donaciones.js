@@ -24,12 +24,14 @@ const Donaciones = () => {
                   </Header>
                   <Content className='main-content mb-3'>
                       <div align='middle'>
+                          <Row >
+                              <Col span={15} offset={5}  gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                           <Row justify='space-around' align='middle' className='Contentd'>
                               <Col span={12}>
                                 <img src={imgdog} className="adog" alt="perrodonaciones" />
                               </Col>
 
-                              <Col span={12}>
+                              <Col span={12} className="donationd">
                                     <h1 >DONACIONES</h1>
                                     <div className="btn-group-vertical">
                                         <Link to={Routes.DONACIONESFISICAS}><Button type="btn btn-access"
@@ -37,13 +39,15 @@ const Donaciones = () => {
                                         <Link to={Routes.DONACIONESTRANSFERENCIA}><Button type="btn btn-access" className='buttonoptiond'>Donaciones Transferencia bancaria</Button></Link>
                                         <Link to={Routes.DONACIONESDEBITO}><Button type="btn btn-access"
                                             className='buttonoptiond'>Donaciones Débito Bancario</Button></Link>
-
+                                        <p className='paragraphfrase'>A veces sentimos que lo que hacemos es tan solo una gota en
+                                            el mar, pero el mar seria menos si le faltara esa gota
+                                            (Madre Teresa de Calcuta).</p>
                                     </div>
                               </Col>
                           </Row>
-                          <p className='paragraphfrase'>A veces sentimos que lo que hacemos es tan solo una gota en
-                              el mar, pero el mar seria menos si le faltara esa gota
-                              (Madre Teresa de Calcuta).</p>
+                              </Col>
+                          </Row>
+
                       </div>
                   </Content>
                   <Footer className= 'main-footer'>

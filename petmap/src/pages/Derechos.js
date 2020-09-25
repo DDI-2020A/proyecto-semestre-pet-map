@@ -24,15 +24,16 @@ const derechos = () => {
                     <Navigation />
                 </Header>
                 <Content className='main-content mb-3'>
+                    <Row>
+                        <Col span={12} offset={6}  gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                 <div className="main_donations">
-                    <Title  className='title1'>DERECHO ANIMAL</Title>
-                    <Title className='seconttitle'>REGLAMENTO NACIONAL DE TENDENCIA DE PERROS</Title>
+                    <h1 className='title1'>DERECHO ANIMAL</h1>
 
                     <p className='paragraph'>En febrero de 2009, se elaboró el Acuerdo Interministerial para la Tenencia Responsable de Perros, el cual entró en vigencia en agosto del mismo año.
                     </p>
                     <p className='paragraph'>En sus puntos principales el reglamento establece:</p>
 
-                    <Title  className='title2'>OBLIGACIONES</Title>
+                    <Title   className='title2'>OBLIGACIONES</Title >
 
                     <p className='paragraph'>
                         <ul>
@@ -45,7 +46,7 @@ const derechos = () => {
                             </ul>
                         </p>
 
-                    <Title  className='title2'>PROHIBICIONES</Title>
+                    <Title   className='title2'>PROHIBICIONES</Title >
 
                     <p className='paragraph'>
                         <ul>
@@ -58,6 +59,8 @@ const derechos = () => {
                         </ul>
                     </p>
                 </div>
+                        </Col>
+                    </Row>
                 </Content>
                 <Footer className= 'main-footer'>
                     <Row justify='space-around' align="middle" className="footer">

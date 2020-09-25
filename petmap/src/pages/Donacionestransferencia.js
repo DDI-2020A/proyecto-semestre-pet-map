@@ -23,8 +23,8 @@ const Donacionestransferencia = () => {
                 </Header>
                 <Content className='main-content mb-3'>
                     <div>
-                        <Link to={Routes.DONACIONES}><Title className='donationtitle'>DONACIONES</Title></Link>
-                        <Title>Donaciones Transferencia o Déposito</Title>
+                        <Link to={Routes.DONACIONES}><h2 className='donationtitle'>DONACIONES</h2></Link>
+                        <h2 className="titlet">Donaciones Transferencia o Déposito</h2>
 
                         <Row>
                             <Col span={12} offset={6}  gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>

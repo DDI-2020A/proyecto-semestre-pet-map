@@ -23,8 +23,9 @@ const Home = () => {
                     <Navigation />
                 </Header>
                 <Content className='main-content mb-3'>
-                    <div align='middle'>
-
+                    <div align='middle' className="conteinerhome">
+                        <Row >
+                            <Col span={15} offset={5}  gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                         <Row justify='space-around' align='middle' className='home'>
                             <Col span={12}>
                                 <img className='adoptame' src={img3} alt="adoptame"/>
@@ -39,7 +40,15 @@ const Home = () => {
                             </Col>
                         </Row>
 
+                            </Col>
+                        </Row>
+                        <p>Te felicitamos por tu decisión de adoptar un perro, sé que lo atenderás como un miembro más de la familia, paso a paso
+                            con su tierna mirada conquistara tu corazón. Estamos orgullosos de ti, por contribuir a mejorar su calidad de vida.</p>
+
+                        <p> Queremos desearte muchas felicidades por adoptar a una mascota. Esperamos que tengas momentos maravillosos
+                            con tu peludo amigo y que sus ladridos inunden tu hogar de alegrías.</p>
                     </div>
+
                 </Content>
                 <Footer className= 'main-footer'>
                     <Row justify='space-around' align="middle" className="footer">
