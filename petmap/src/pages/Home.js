@@ -23,19 +23,22 @@ const Home = () => {
                     <Navigation />
                 </Header>
                 <Content className='main-content mb-3'>
-                    <div>
+                    <div align='middle'>
+
                         <Row justify='space-around' align='middle' className='home'>
-                            <Col><span><strong>
+                            <Col span={12}>
                                 <img className='adoptame' src={img3} alt="adoptame"/>
-                                </strong></span>
+
                             </Col>
-                            <Col ><span><strong>
-                                <Link to={Routes.DONACIONES}><Button type="btn btn-access" className='buttonoption'>Donaciones</Button></Link>
-                                <Link to={Routes.ADOPTA}><Button type="btn btn-access" className='buttonoption'>Adopción</Button></Link>
-                                <Link to={Routes.REGISTROANIMAL}><Button type="btn btn-access" className='buttonoption' >Registro Animal</Button></Link>
-                                </strong></span>
+                            <Col span={12}>
+                                <div className="btn-group-vertical">
+                                <Link to={Routes.DONACIONES}><Button type="btn btn-access" className='buttonoptionh'>Donaciones</Button></Link>
+                                <Link to={Routes.ADOPTA}><Button type="btn btn-access" className='buttonoptionh'>Adopción</Button></Link>
+                                <Link to={Routes.REGISTROANIMAL}><Button type="btn btn-access" className='buttonoptionh' >Registro Animal</Button></Link>
+                                </div>
                             </Col>
                         </Row>
+
                     </div>
                 </Content>
                 <Footer className= 'main-footer'>

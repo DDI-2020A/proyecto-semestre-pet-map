@@ -1,6 +1,6 @@
 import React from 'react';
 import "../styles/forms.less";
-import {Input, Button, Col, Layout, Row, Checkbox, Form, Select} from "antd";
+import {Input, Button, Col, Layout, Row, Checkbox, Form, Select,message} from "antd";
 import {Link} from 'react-router-dom';
 import Routes from "../constants/routes";
 import Logo from "../images/logo.svg";
@@ -11,10 +11,15 @@ import no from "../images/noIg.svg";
 const {Content,Footer,Header} = Layout;
 
 const FormAdoption = () => {
+
     function onChange(e) {
         console.log(`checked = ${e.target.checked}`);
     }
-    const handleSubmit = () =>{}
+    const handleSubmit = () =>{
+        function hacerclick(){
+            message.success("Datos guardados con exito");
+        }
+    }
     return (
         <>
             <Header className='main-header'>
@@ -119,7 +124,7 @@ const FormAdoption = () => {
                             </Form.Item>
 
                             <Form.Item wrapperCol={{ span: 12, offset: 6 }}>
-                                <Button className="submit-form" type="btn btn-access" htmlType="submit">
+                                <Button className="submit-form" type="btn btn-access" htmlType="submit" onClick={"hacerclick()"}>
                                     Enviar
                                 </Button>
                             </Form.Item>
