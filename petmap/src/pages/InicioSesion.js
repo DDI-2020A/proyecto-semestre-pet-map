@@ -93,22 +93,11 @@ const InicioSesion = () =>{
                                 >
                                     <Input.Password />
                                 </Form.Item>
-
-                                <Form.Item  name="remember" valuePropName="checked">
-                                    <Checkbox>Remember me</Checkbox>
-                                </Form.Item>
                                 <Form.Item >
                                     <Button type="btn btn-access" className="sesion" htmlType="submit">
                                         Iniciar Sesión
                                     </Button>
                                 </Form.Item>
-
-                                <Form.Item >
-                                    <Button className="link" type="link" htmlType="submit">
-                                        ¿Olvidaste tu contraseña?
-                                    </Button>
-                                </Form.Item>
-
                             </Form>
                         </div>
                     </Col>

@@ -24,10 +24,7 @@ const Navigation=()=>{
             <Menu.Item key='registro' icon={<FormOutlined />}>
                 <Link to={Routes.ADOPTA}>Adopción</Link>
             </Menu.Item>
-            <Menu.Item key='noticias' icon={<NotificationOutlined />}>
-                Noticias
-            </Menu.Item>
-            <SubMenu icon={<ApartmentOutlined />} title='servicios'>
+            <SubMenu icon={<ApartmentOutlined />} title='Servicios'>
                 <Menu.Item key="donaciones"><Link to={Routes.DONACIONES}>Donaciones</Link></Menu.Item>
                 <Menu.Item key="registroA"><Link to={Routes.REGISTROANIMAL}>Registro Animal</Link></Menu.Item>
             </SubMenu>

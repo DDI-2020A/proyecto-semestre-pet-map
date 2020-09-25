@@ -1,20 +1,64 @@
-import React from 'react';
+import React, {useState,useEffect}from 'react';
 import "../styles/forms.less";
-import {Input, Button, Col, Layout, Row, Checkbox, Form, Select} from "antd";
+import {Input, Button, Col, Layout, Row, Checkbox, Form, Select, message} from "antd";
 import {Link} from 'react-router-dom';
 import Routes from "../constants/routes";
 import Logo from "../images/logo.svg";
 import Navigation from "../components/Navigation";
 import {EditOutlined, DingtalkOutlined, DeploymentUnitOutlined, YoutubeOutlined} from '@ant-design/icons';
 import no from "../images/noIg.svg";
+import FIREBASE from "../firebase";
 
 const {Content,Footer,Header} = Layout;
 
 const FormAdoption = () => {
-    function onChange(e) {
-        console.log(`checked = ${e.target.checked}`);
+
+    const [user,setUsers] = useState(
+        []
+    );
+
+    const handleSubmitForm = async (values) =>{
+        console.log('form', values);
+            await FIREBASE.db.ref('Formularios').push({
+                ...values,
+        });
+        message.success('Los datos se han registrado correctamente');
+        alert('Los datos ingresados están en proceso de validación, por favor espere un mensaje de confirmación al correo que ingresó');
     }
-    const handleSubmit = () =>{}
+    /*
+    const handleSearchEmail = async () =>{
+        let email=FIREBASE.auth().currentUser.email;
+        //await FIREBASE.auth().currentUser.email;
+        return FIREBASE.database().ref('/email/' + email).once('value').then(function(snapshot) {
+            var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+            // ...
+        });
+
+    }*/
+    const handleSearchEmail = async () =>{
+        const emailI = document.querySelector('#searchE').value ;
+        FIREBASE.db.ref('users').once('value')
+            .then((snapshot) =>{
+                const users = [];
+                snapshot.forEach( ( data ) =>{
+                    console.log('users', data.val());
+                    const user = data.val();
+                    const userId = data.key;
+                    users.push({
+                        key: userId,
+                        apellido: user.apellido,
+                        email: user.email,
+                        nombre: user.nombre,
+                        telefono: user.telefono
+                    })
+                    if(emailI === user.email){
+
+                        message.success('Usuario validado')
+                    }
+                });
+                console.log('Users values', users )
+            });
+    }
     return (
         <>
             <Header className='main-header'>
@@ -26,7 +70,7 @@ const FormAdoption = () => {
 
             <Content className='main-content mb-3'>
                <div className="main-reg">
-                <div className="main-title"><h3> Registro de Adopción  <EditOutlined/></h3></div>
+                <div className="main-title"><h3> Registro de Adopción <EditOutlined/></h3></div>
                 <div className="row">
                     <div className="col-5 photo">
                         <img src={no} alt="adoption"/>
@@ -34,9 +78,22 @@ const FormAdoption = () => {
                     <div className="col-7 form-reg">
                         <Form
                             name='pet-form'
-                            onFinish={handleSubmit}
+                            onFinish={handleSubmitForm}
                         >
-                            <p>¿Ha tenido mascotas con aterioridad?</p>
+                            <Form.Item
+                                label={<DeploymentUnitOutlined />}
+                                name='Correo de usuario'
+                                rules={ [
+                                    {
+                                        required: true,
+                                        message: 'Necesitamos conocer la respuesta'
+                                    }
+                                ]}
+                            >
+                                <Input placeholder="Ingrese su correo" id="searchE"/>
+                            </Form.Item>
+                            <Button className="search-email" type="btn btn-access btn-lg" onClick={handleSearchEmail }>Verificar</Button>
+                            <p>¿Ha tenido mascotas con anterioridad?</p>
                             <Form.Item
                                 label={<DeploymentUnitOutlined />}
                                 name='r1'
@@ -84,10 +141,10 @@ const FormAdoption = () => {
                                     <Select.Option value="no">No</Select.Option>
                                 </Select>
                             </Form.Item>
-                            <p>¿Cuenta con el espacio suficiente en su vivienda para tener una mascota?</p>
+                            <p>¿Cuenta con espacio suficiente en su vivienda para tener una mascota?</p>
                             <Form.Item
                                 label={<DeploymentUnitOutlined />}
-                                name='calle'
+                                name='r4'
                                 rules={ [
                                     {
                                         required: true,
@@ -103,7 +160,7 @@ const FormAdoption = () => {
                             <p>¿Cuántas veces al día alimentaría a su mascota?</p>
                             <Form.Item
                                 label={<DeploymentUnitOutlined />}
-                                name='descripcion'
+                                name='r5'
                                 rules={ [
                                     {
                                         required: true,
@@ -116,6 +173,19 @@ const FormAdoption = () => {
                                     <Select.Option value="2">2</Select.Option>
                                     <Select.Option value="3">3</Select.Option>
                                 </Select>
+                            </Form.Item>
+                            <p>¿Por qué quiere adoptar? (IMPORTANTE)</p>
+                            <Form.Item
+                                label={<DeploymentUnitOutlined />}
+                                name='r6'
+                                rules={ [
+                                    {
+                                        required: true,
+                                        message: 'necesitamos conocer la respuesta'
+                                    }
+                                ]}
+                            >
+                                <Input.TextArea placeholder="Escriba su respuesta"/>
                             </Form.Item>
 
                             <Form.Item wrapperCol={{ span: 12, offset: 6 }}>

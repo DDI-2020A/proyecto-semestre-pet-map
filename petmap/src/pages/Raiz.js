@@ -187,19 +187,6 @@ const Raiz = () => {
                                             >
                                                 <Input maxLength={10}  style={{ width: '100%' }} />
                                             </Form.Item>
-
-                                            <Form.Item
-                                                name="agreement"
-                                                valuePropName="checked"
-                                                rules={[
-                                                    { validator:(_, value) => value ? Promise.resolve() : Promise.reject('Should accept agreement') },
-                                                ]}
-
-                                            >
-                                                <Checkbox>
-                                                    Aceptar terminos y condiciones
-                                                </Checkbox>
-                                            </Form.Item>
                                             <Form.Item>
                                                 <Button type="btn btn-access" shape="round" htmlType="submit" onClick={handleNoVisibleModal} >
                                                     Registrar

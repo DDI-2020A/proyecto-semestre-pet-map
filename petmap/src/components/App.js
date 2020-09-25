@@ -26,7 +26,7 @@ const App = () => {
                console.log( 'user', user );
                console.log( 'uid', uid );
              // hacer la consulta a la bdd en el node (`users/${uid}`)
-               history.push( Routes.HOME );
+               //history.push( Routes.HOME );
          } else {
          // User is signed out.
            console.log( 'user loggedOut' );

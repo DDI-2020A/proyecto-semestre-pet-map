@@ -1,10 +1,6 @@
 import React from 'react';
 import '../styles/Mision.less';
 import dog from '../images/dog1.png';
-import d1 from "../images/Carlos.jpg";
-import d2 from "../images/Yoma.jpg";
-import d3 from "../images/Guillo.jpg";
-import d4 from "../images/Elvis.jpg";
 import {Link} from "react-router-dom";
 import Routes from "../constants/routes";
 import Logo from "../images/logo.svg";
@@ -31,36 +27,17 @@ const Mision = () => {
                             <img src={dog}/>
                         </div>
                         <div className="col-6">
-                            <h1>MISIÓN</h1>
+                            <h1>¿QUIENES SOMOS?</h1>
                             <p>PETMAP es una idea que nació gracias al amor por los animales de un grupo de estudiantes de la Escuela Politécnica Nacional.</p>
                             <p>Promovemos la protección y adopción de animales mediante la aplicación "PET MAP" y la conciencia de la comunidad sobre el respeto que merecen y se debe tener hacia las demás especies.</p>
-                            <p>Cada animalito que se encuentre sin un hogar, brindarle cariño, comida y un techo donde vivir, es nuetr misión. </p>
                             <br/>
-                            <h1>VISIÓN</h1>
+                            <h1>MISIÓN</h1>
                             <p>Ser una organización autosustentable, reconocida como referencia nacional en el bienestar y protección animal, responsable del cambio en la relacion humana - animal en el Ecuador, Coordinaciones en la ciudad de Quito y sus alrededores.</p>
-                        </div>
-                        <div className="Desarrolladores" >
-                            <h1 className="main_title">DESARROLLADORES</h1>
-                            <Row justify='space-around' align="middle">
-                                <Col span={8}>
-                                    <img src={d1} alt={'Carlos'}/>
-                                    <h3>Carlos Montesdeoca</h3>
-                                </Col>
-                                <Col span={8}>
-                                    <img src={d2} alt={'Yoma'}/>
-                                    <h3>Yomara Díaz</h3>
-                                </Col>
-                            </Row>
-                            <Row justify='space-around' align="middle">
-                                <Col span={8}>
-                                    <img src={d3} alt={'Guillo'}/>
-                                    <h3>Guillermo Rivera</h3>
-                                </Col>
-                                <Col span={8}>
-                                    <img src={d4} alt={'Elvis'}/>
-                                    <h3>Elvis Agila</h3>
-                                </Col>
-                            </Row>
+                            <p>Cada animalito que se encuentre sin un hogar, brindarle cariño, comida y un techo donde vivir, es nuestra misión. </p>
+                            <h1>VISIÓN</h1>
+                            <p>Para el año 2025 PET MAP aspira ser una herramienta reconocida y aceptada a nivel Nacional y de esta manera haber logrado una reducción en la problematica</p>
+                            <p>que involucra a los animalitos de la calle.</p>
+
                         </div>
                     </div>
                 </Content>
