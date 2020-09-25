@@ -5,7 +5,6 @@ import Routes from "../constants/routes";
 import {Link} from 'react-router-dom';
 import Logo from "../images/logo.svg";
 import imgdog from "../images/perrodonaciones.svg";
-import imgcat from "../images/gatodonaciones.svg";
 import Navigation from "../components/Navigation";
 import {YoutubeOutlined} from "@ant-design/icons";
 
@@ -24,28 +23,27 @@ const Donaciones = () => {
                       <Navigation />
                   </Header>
                   <Content className='main-content mb-3'>
-                      <div>
+                      <div align='middle'>
                           <Row justify='space-around' align='middle' className='Contentd'>
-                              <Col><span><strong>
-                                <img src={imgdog} className="adog" alt="perrodonaciones"/>
-                              </strong></span></Col>
+                              <Col span={12}>
+                                <img src={imgdog} className="adog" alt="perrodonaciones" />
+                              </Col>
 
-                              <Col><span><strong>
-                                    <h1>DONACIONES</h1>
+                              <Col span={12}>
+                                    <h1 >DONACIONES</h1>
                                     <div className="btn-group-vertical">
                                         <Link to={Routes.DONACIONESFISICAS}><Button type="btn btn-access"
                                             className='buttonoptiond'>Donaciones físicas</Button></Link>
                                         <Link to={Routes.DONACIONESTRANSFERENCIA}><Button type="btn btn-access" className='buttonoptiond'>Donaciones Transferencia bancaria</Button></Link>
                                         <Link to={Routes.DONACIONESDEBITO}><Button type="btn btn-access"
                                             className='buttonoptiond'>Donaciones Débito Bancario</Button></Link>
+
                                     </div>
-                              </strong></span></Col>
-                              <p className='paragraphfrase'>A veces sentimos que lo que hacemos es tan solo una gota en
-                                  el mar, pero el mar seria menos si le faltara esa gota
-                                  (Madre Teresa de Calcuta).</p>
+                              </Col>
                           </Row>
-
-
+                          <p className='paragraphfrase'>A veces sentimos que lo que hacemos es tan solo una gota en
+                              el mar, pero el mar seria menos si le faltara esa gota
+                              (Madre Teresa de Calcuta).</p>
                       </div>
                   </Content>
                   <Footer className= 'main-footer'>
